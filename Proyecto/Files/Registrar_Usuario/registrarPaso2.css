@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'roboto';
+    src: url(/Proyecto/Fonts/Roboto-Regular.ttf);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'roboto';
+    box-sizing: border-box;
+}
+
+
+
+.logo-header {
+    width: 50px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px 10px 30px;
+    border-bottom: 1px solid #00000020;
+}
+
+.link.sesion {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #ff6600;
+}
+
+.tarjetas {
+
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.tarjeta {
+    height: 30px;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-head {
+    padding-top: 30px;
+}
+
+.titulo {
+    font-size: 14px;
+}
+
+.titulo-secundario {
+    font-size: 30px;
+    color: #333333;
+    padding-top: 5px;
+}
+
+.form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.composicion-tarjeta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.tarjeta-icono {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    padding-left: 5px;
+    height: 40px;
+}
+
+.input-num-tarjeta {
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.composicion-cupon{
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+    justify-content: center;
+}
+
+.labeltransferencia{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    text-decoration: underline;
+}
+
+.boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+}
+.botonform{
+    height: 45px;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+    width: 350px;
+    margin-bottom: 150px;
+}
+
+.footer{
+    padding: 20px 0px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    border-top: 1px solid #00000020;
+
+
+}
+.links-footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.link-footer{
+    text-decoration: none;
+    color: #0000006f;
+    font-size: 12px;
+}
+.titulo-footer {
+    font-size: 15px;
+    color: #0000006f;
+}

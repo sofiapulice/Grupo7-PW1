@@ -7,10 +7,11 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'roboto';
+
 }
 
 body {
-    font-family: 'roboto';
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -35,7 +36,6 @@ main {
     font-weight: bold;
     letter-spacing: 1px;
     color: #ff6600;  
-
 }
 
 .link.sesion:hover {
@@ -44,10 +44,10 @@ main {
 
 .header {
     padding: 10px 30px 10px 30px;
+    border-bottom: 1px solid #00000020;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #00000020;
 }
 
 .link.logo {
