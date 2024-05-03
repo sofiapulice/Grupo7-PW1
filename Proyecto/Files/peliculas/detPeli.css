@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    color: #fff;
+}
+.detPeliMain{
+    margin: 1em 1em;
+}
+.hp3 {
+    width: 37.5em;
+    height: 25em;
+}
+.detPeli{
+    display: flex;
+}
+.detPeli__descrip{
+    margin: 0em 3em;
+    text-align: center;
+}
+.detPeli__descrip .button {
+    display: inline-block;
+    margin-top: 4em;
+}
+.detPeli__descrip p{
+    margin-top: 1.5em;
+}
+/*BOTONES*/
+
+.button a{
+    margin: 3em;
+    font-family: "DM Serif Display", serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1.2em;
+    background-color: #9456E5;
+    border-radius: 5px;
+    padding: 5px 40px;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+li a:hover {
+    text-decoration: underline;
+}
+.button a:hover{
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    background-color: #751de7;
+}
+/*TIPOGRAFIA PARA EL TITULO*/
+h2 {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3em;
+    margin-bottom: 0.8em;
+    color: #9456E5;
+    text-align: left;
+}
+h5 {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+/*TIPOGRAFIA PARA EL TEXTO GENERAL*/
+li{
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+    margin: 1em 0em;
+    list-style-type: none;
+    text-align: left;
+}
+p{
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+/*IFRAME PELIS*/
+.detPeli__iframe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+iframe {
+    width: 80%;
+    height: 500px;
+    border: 2px solid #751de7;
+    margin-top: 50px;
+}
+/*IFRAME PELIS*/
+.otrasPelis{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+.otrasPelis img{
+    width: 27em;
+    height: 20em;
+}
+
+select {
+    border-radius: 5px;
+    padding: 10px 8px;
+    color: white;
+    background-color: #434C67;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 2.s ease all;
+}
+select:hover{
+    background-color: #626879;
+}
+
+option {
+    padding: 7px 4px;
+    background-color: #434C67;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
