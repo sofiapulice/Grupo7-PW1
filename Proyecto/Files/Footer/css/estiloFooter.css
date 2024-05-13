@@ -61,3 +61,16 @@ footer{
 .copy p{
     font-size: 10px;
 }
+
+@media screen and (width < 376px) {
+  footer{  
+    font-size: 8px;
+  }
+  .copy p{
+    font-size: 7px;
+  }
+  .redes-icons i{
+    font-size: 20px;
+    padding: 10px;
+  }
+}
