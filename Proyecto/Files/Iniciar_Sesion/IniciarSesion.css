@@ -150,3 +150,29 @@ p2 {
 a {
   color: #ffffff;
 }
+
+@media screen and (width < 450px) {
+  .wrapper{
+    width: 250px;
+    padding: 1px 20px;
+  }
+  .wrapper h1 {
+    font-size: 25px;
+  }
+  .wrapper .input-box {
+    height: 40px;
+    margin: 25px 0;
+  }
+
+  .wrapper .remember-forgot {
+    font-size: 12px;
+  }
+
+  .wrapper .register-link {
+    font-size: 12px;
+  }
+
+  .wrapper .btn {
+    height: 40px;
+  }
+}
