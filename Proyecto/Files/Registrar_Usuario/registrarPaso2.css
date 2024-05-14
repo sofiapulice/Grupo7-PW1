@@ -130,6 +130,14 @@
     margin-bottom: 150px;
 }
 
+input[type="radio"] {
+    accent-color: #9456e5;
+}
+  
+  input[type="checkbox"] {
+    accent-color: #ee660c;
+}
+
 .footer{
     padding: 20px 0px 50px 50px;
     display: flex;
@@ -154,4 +162,42 @@
 .titulo-footer {
     font-size: 15px;
     color: #0000006f;
+}
+@media screen and (width<500px) {
+  header .logo-header {
+    width: 30px;
+  }
+  header .link.sesion{
+    font-size: 12px;
+  }
+  .titulo {
+    font-size: 12px;
+  }
+  
+  .titulo-secundario {
+    font-size: 20px;
+  }
+  .input {
+    height: 40px;
+    width: 260px;
+    font-size: 12px;
+  }
+
+  .tarjeta-icono svg{
+    width: 12px;
+  }
+ 
+  .input-num-tarjeta::placeholder{
+    font-size: 10px;
+  }
+
+  .input-num-tarjeta {
+    width: calc(50% - 5px); 
+  }
+
+  .boton button{
+    height: 40px;
+    font-size: 13px;
+    width: 280px;
+  }
 }
