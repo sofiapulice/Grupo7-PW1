@@ -121,3 +121,26 @@ a{
   text-decoration: underline;
 }
 
+@media screen and (width < 400px) {
+  .wrapper {
+    width: 250px;
+    padding: 1px 20px;
+  }
+  .wrapper h1 {
+    font-size: 27px;
+  }
+  .wrapper .input-box {
+    height: 40px;
+    margin: 25px 0;
+  }
+  .wrapper .enviar {
+    height: 30px;
+  }
+  .wrapper .cancelar {
+    height: 30px;
+  }
+  .wrapper .inicio-link p {
+    font-size: 12px;
+  }
+}
+
