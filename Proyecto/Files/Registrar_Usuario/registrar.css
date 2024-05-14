@@ -1,68 +1,66 @@
 @font-face {
-    font-family: 'roboto';
-    src: url(/Proyecto/Fonts/Roboto-Regular.ttf);
+  font-family: "roboto";
+  src: url(/Proyecto/Fonts/Roboto-Regular.ttf);
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'roboto';
-
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "roboto";
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo-header {
-    width: 50px;
+  width: 50px;
 }
 
 .link {
-    color: #000000;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: #ff6600;  
+  color: #000000;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #ff6600;
 }
 
 .link.sesion:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .header {
-    padding: 10px 30px 10px 30px;
-    border-bottom: 1px solid #00000020;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
+  padding: 10px 30px 10px 30px;
+  border-bottom: 1px solid #00000020;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 .link.logo {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .logo-titulo {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
-.titulo.sub2{
-    font-size: 20px;
+.titulo.sub2 {
+  font-size: 20px;
 }
 
 .contenedor {
@@ -71,114 +69,83 @@ main {
   margin: 0 auto;
 }
 
-
-.footer {
-    padding: 20px 0px 50px 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
-    border-top: 1px solid #00000020;
-}
-
-.links-footer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.link-footer:hover {
-    text-decoration: underline;
-}
-
-.link-footer {
-    text-decoration: none;
-    color: #0000006f;
-    font-size: 12px;
-}
-
-.titulo-footer {
-    font-size: 15px;
-    color: #0000006f;
-}
-
 .box {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .subtitulo.sub2 {
-    font-weight: lighter;
-    padding-bottom: 20px;
-    color: #000000a9;
-    font-size: 15px;
+  font-weight: lighter;
+  padding-bottom: 20px;
+  color: #000000a9;
+  font-size: 15px;
 }
 
 .campos {
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .input {
-    padding-left: 10px;
-    height: 45px;
-    border: 1px solid #0000001d;   
-    transition: .6s ease;
-    border-radius: 5px;
-    width: 350px;
+  padding-left: 10px;
+  height: 45px;
+  border: 1px solid #0000001d;
+  transition: 0.6s ease;
+  border-radius: 5px;
+  width: 350px;
 }
 
-.boton{
-    margin-top: 15px;
-    height: 45px;
-    background-color: #ff6600;
-    border: none;
-    border-radius: 7px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 15px;
-    width: 350px;
+.boton {
+  margin-top: 15px;
+  height: 45px;
+  background-color: #ff6600;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+  width: 350px;
 }
 
-.input:hover{
-    border: 2px solid #ff6600ab;
-    box-shadow: 4px 4px 0px 0px #00000020;
-    border-radius: 10px;
-    height: 45px;
-    width: 400px;
+.input:hover {
+  border: 2px solid #ff6600ab;
+  box-shadow: 4px 4px 0px 0px #00000020;
+  border-radius: 10px;
+  height: 45px;
+  width: 400px;
 }
 
-.input:focus{
-    outline: none;
+.input:focus {
+  outline: none;
 }
 
-.boton:focus{
-    background-color: rgb(255, 150, 44);
+.boton:focus {
+  background-color: rgb(255, 150, 44);
 }
 
-.buttonDiv{
-    display: flex;
-    justify-content: center;
-    align-content: center;
+.buttonDiv {
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
-.titulo-subtitulo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.titulo-subtitulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.inputs{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
 }
 
 @media screen and (width < 500px) {
@@ -214,5 +181,3 @@ main {
     font-size: 10px;
   }
 }
-
-
