@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="nav.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/perfil.css">
+</head>
+
+<body>
+
+    <nav>
+    </nav>
+    <div class="contenedor">
+        <div class="perfil">
+            <div class="img">
+                <img src="../img/perfil.PNG" alt="">
+                <h2>Usuario12345</h2>
+            </div>
+            <div class="info-user">
+                <div>
+                    <p>Email:</p>
+                    <p class="email"> usuariio123@gmail.com</p>
+                </div>
+                <div class="contraseña">
+                    <p>Contraseña:</p>
+                    <p>*******************</p>
+                </div>
+                <div>
+                    <label for="password">Nueva contraseña</label>
+                    <input type="password" id="password" placeholder="Contraseña">
+                </div>
+                <div class="confirmar-contrasenia">
+                    <label for="confirm-password">Confirmar Contraseña</label>
+                    <input type="password" id="confirm-password" placeholder="Confirmar Contraseña">
+                </div>
+            </div>
+            <div class="metodos-pago">
+                <h3>Métodos de pagos</h3>
+                <div class="opcion">
+                    <label for="tarjeta_credito">
+                        <input type="radio" id="tarjeta_credito">
+                        Tarjeta de crédito
+                    </label>
+                    <div class="opcion-opcion">
+                        <input type="text" placeholder=" Número de tarjeta">
+                        <input type="number" placeholder=" XXX">
+                    </div>
+                </div>
+                <div class="opcion">
+                    <label><input type="radio"> Cupón de pago</label>
+                    <div class="opcion-opcion">
+                        <label><input type="checkbox"> Pago fácil</label>
+                        <label><input type="checkbox"> RapiPago</label>
+                    </div>
+                </div>
+                <div class="opcion">
+                    <label><input type="radio"> Transferencia bancaria</label>
+                    <div class="opcion-opcion">
+                        <p>CBU: 2188999918282992000029</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="btn">
+            <a href="perfil.html"><button class="guardar">Guardar cambios</button></a>
+            <a href="index.html"><button class="cancelar">Cancelar subscripción</button></a>
+        </div>
+    </div>
+</body>
+
+</html>
