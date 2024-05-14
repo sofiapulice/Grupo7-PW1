@@ -48,6 +48,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .link.logo {
@@ -65,10 +66,11 @@ main {
 }
 
 .contenedor {
-    width: 500px;
-    height: 600px;
-
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
+
 
 .footer {
     padding: 20px 0px 50px 50px;
@@ -177,6 +179,40 @@ main {
     justify-content: center;
     align-items: center;
     gap: 12px;
+}
+
+@media screen and (width < 500px) {
+  header .logo-header {
+    width: 30px;
+  }
+
+  header .link {
+    font-size: 12px;
+  }
+
+  .box {
+    font-size: 12px;
+    justify-content: center;
+  }
+
+  .subtitulo.sub2 {
+    font-size: 11px;
+  }
+
+  .input {
+    height: 40px;
+    width: 280px;
+  }
+
+  .boton {
+    height: 40px;
+    font-size: 13px;
+    width: 280px;
+  }
+
+  .input::placeholder {
+    font-size: 10px;
+  }
 }
 
 
