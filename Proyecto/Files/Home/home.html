@@ -5,37 +5,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unflix --Home</title>
-    <link rel="stylesheet" href="/Proyecto/Files/Home/normalize.css">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="../Footer/estiloFooter.css">
+    <link rel="stylesheet" href="../nav/nav.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 </head>
 
 <body>
     <div class="contenedor">
 
-        <nav class="nav">
-            <div class="nav__left">
-                <ul class="nav__left__opciones-menu">
-                    <li class="nav__li"><a class="nav__links" href="#">Inicio</a></li>
-                    <li class="nav__li"><a class="nav__links" href="#">Peliculas</a></li>
-                    <li class="nav__li"><a class="nav__links" href="#">Series</a></li>
-                    <li class="nav__li"><a class="nav__links" href="#">Generos</a></li>
-                </ul>
-
-            </div>
-
-            <div class="nav__right">
-
-                <div class="nav__right__input">
-                    <input type="text" placeholder="Buscar" class="nav__right__input input">
-                    <a href="#" class="nav__search"><i class="bi bi-search"></i></a>
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="../nav/img/logo.png" alt="logoUnflix">
+                    <ul class="cont-ul">
+                        <li>
+                            <a class="inicio" href="./inicio.html(AGREGAR CUANDO ESTE HECHO)">Inicio</a>
+                        </li>
+                        <li>
+                            <a class="color" href="../peliculas/detPeli.html">Peliculas</a>
+                        </li>
+                        <li>
+                            <a class="color" href="../series/detSerie.html">Series</a>
+                        </li>
+                        <li class="generos">
+                            <a class="generos-items">Categoría</a><i class='bx bx-chevron-down'></i>                      
+                            <ul class="ul-second">
+                                <li class="menu-inside">
+                                    <a class="generos-items generos-items--inside" href="./peliculasAccion(AGREGAR CUANDO ESTE HECHO)">Acción</a>
+                                </li>
+                                <li class="menu-inside">
+                                    <a class="generos-items generos-items--inside" href="./peliculasAventura">Aventura</a>
+                                </li>
+                                <li class="menu-inside">
+                                    <a class="generos-items generos-items--inside" href="./peliculasFiccion">Ciencia ficción</a>
+                                </li>
+                                <li class="menu-inside">
+                                    <a class="generos-items generos-items--inside" href="./peliculascomedia">Comedia</a>
+                                </li>
+                                <li class="menu-inside">
+                                    <a  class="generos-items generos-items--inside"href="./peliculasdrama">Drama</a>
+                                </li>
+                                <li class="menu-inside">
+                                    <a  class="generos-items generos-items--inside"href="./peliculasfantasia">Fantasía</a>
+                                </li>
+                                <li class="menu-inside">
+                                    <a class="generos-items generos-items--inside" href="./peliculasromance">Romance</a>
+                                </li>
+                                <li class="menu-inside">
+                                    <a class="generos-items generos-items--inside" href="./peliculasAsuspenso">Suspenso</a>
+                                </li>
+                                <li class="menu-inside">
+                                    <a class="generos-items generos-items--inside" href="./peliculasterror">Terror</a>
+                                </li>
+                            </ul> 
+                        </li>
+                    </ul>
                 </div>
-
-                <div class="nav__right_foto-perfil">
-                    <a href="#"><img class="foto_perfil" src="/Proyecto/Files/img/perfil.png" alt="foto de perfil"></a>
+                <div class="buscar-pelicula">
+                    <div class="linea-buscar">
+                        <form action="ejemplo.html(AGREGAR CUANDO ESTE HECHO)" method="get">
+                            <input type="text" placeholder="Buscar...">
+                            <i class='bx bx-search'></i>
+                        </form>
+                    </div>
+                    <a href="../perfil/perfil.html"><img src="../img/perfil.PNG" alt="perfil"></a>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </header>
 
         <main class="Main">
 
@@ -48,28 +86,28 @@
                 <div class="Main__grilla__peliculas">
                     <a href="#" class="link__arrow"><i class="bi bi-chevron-double-left"></i></a>
                     <div class="pelicula">
-                        <a href="#"><img class="cover__pelicula" src="/Proyecto/Files/Home/img/Batman2.jpg"
+                        <a href="#"><img class="cover__pelicula" src="../img/Batman2.jpg"
                                 alt="Batman"></a>
                         <a class="titulo__pelicula" href="#">Batman</a>
                     </div>
                     <div class="pelicula">
                         <a class="link_pelicula" href="#"><img class="cover__pelicula"
-                                src="/Proyecto/Files/Home/img/Sin título-1.jpg" alt="Breaking-Bad"></a>
+                                src="../Home/img/Sin título-1.jpg" alt="Breaking-Bad"></a>
                         <a class="titulo__pelicula" href="#">Breaking-Bad</a>
                     </div>
                     <div class="pelicula">
                         <a class="link_pelicula" href="#"><img class="cover__pelicula"
-                                src="/Proyecto/Files/Home/img/Sin título-2.jpg" alt="Chernobyl"></a>
+                                src="../Home/img/Sin título-2.jpg" alt="Chernobyl"></a>
                         <a class="titulo__pelicula" href="#">Chernobyl</a>
                     </div>
                     <div class="pelicula">
                         <a class="link_pelicula" href="#"><img class="cover__pelicula"
-                                src="/Proyecto/Files/Home/img/Sin título-3.jpg " alt="Game of Thrones"></a>
+                                src="../Home/img/Sin título-3.jpg " alt="Game of Thrones"></a>
                         <a class="titulo__pelicula" href="#">Game of Thrones</a>
                     </div>
                     <div class="pelicula">
                         <a class="link_pelicula" href="#"><img class="cover__pelicula"
-                                src="/Proyecto/Files/Home/img/Sin título-4.jpg" alt="Harry-Potter"></a>
+                                src="../Home/img/Sin título-4.jpg" alt="Harry-Potter"></a>
                         <a class="titulo__pelicula" href="#">Harry-Potter</a>
                     </div>
                     <a href="#" class="link__arrow"><i class="bi bi-chevron-double-right"></i>

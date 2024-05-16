@@ -10,7 +10,13 @@
     box-sizing: border-box;
 }
 
-
+body {
+    background-image: url(../../Images/vistaLogin.jpg);
+    color: white;
+}
+.titulos .titulo-secundario {
+    color: white;
+}
 
 .logo-header {
     width: 50px;
@@ -21,7 +27,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px 10px 30px;
-    border-bottom: 1px solid #00000020;
 }
 
 .link.sesion {

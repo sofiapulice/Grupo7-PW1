@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="detPeli.css">
     <link rel="stylesheet" href="../mobile.css">
+    <link rel="stylesheet" href="../nav/nav.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../Footer/estiloFooter.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!--TIPOGRAFÍA PARA LOS TÍTULOS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,14 +23,68 @@
     
     <header>
         <nav>
-            
+            <div class="logo">
+                <img src="../nav/img/logo.png" alt="logoUnflix">
+                <ul class="cont-ul">
+                    <li>
+                        <a class="inicio" href="./inicio.html(AGREGAR CUANDO ESTE HECHO)">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="color" href="./Peliculas.html(AGREGAR CUANDO ESTE HECHO)">Peliculas</a>
+                    </li>
+                    <li>
+                        <a class="color" href="./series.html(AGREGAR CUANDO ESTE HECHO)">Series</a>
+                    </li>
+                    <li class="generos">
+                        <a class="generos-items">Categoría</a><i class='bx bx-chevron-down'></i>                      
+                        <ul class="ul-second">
+                            <li class="menu-inside">
+                                <a class="generos-items generos-items--inside" href="./peliculasAccion(AGREGAR CUANDO ESTE HECHO)">Acción</a>
+                            </li>
+                            <li class="menu-inside">
+                                <a class="generos-items generos-items--inside" href="./peliculasAventura">Aventura</a>
+                            </li>
+                            <li class="menu-inside">
+                                <a class="generos-items generos-items--inside" href="./peliculasFiccion">Ciencia ficción</a>
+                            </li>
+                            <li class="menu-inside">
+                                <a class="generos-items generos-items--inside" href="./peliculascomedia">Comedia</a>
+                            </li>
+                            <li class="menu-inside">
+                                <a  class="generos-items generos-items--inside"href="./peliculasdrama">Drama</a>
+                            </li>
+                            <li class="menu-inside">
+                                <a  class="generos-items generos-items--inside"href="./peliculasfantasia">Fantasía</a>
+                            </li>
+                            <li class="menu-inside">
+                                <a class="generos-items generos-items--inside" href="./peliculasromance">Romance</a>
+                            </li>
+                            <li class="menu-inside">
+                                <a class="generos-items generos-items--inside" href="./peliculasAsuspenso">Suspenso</a>
+                            </li>
+                            <li class="menu-inside">
+                                <a class="generos-items generos-items--inside" href="./peliculasterror">Terror</a>
+                            </li>
+                        </ul> 
+                    </li>
+                </ul>
+            </div>
+            <div class="buscar-pelicula">
+                <div class="linea-buscar">
+                    <form action="ejemplo.html(AGREGAR CUANDO ESTE HECHO)" method="get">
+                        <input type="text" placeholder="Buscar...">
+                        <i class='bx bx-search'></i>
+                    </form>
+                </div>
+                <a href="perfil.html(AGREGAR CUANDO ESTE HECHO)"><img src="../img/perfil.PNG" alt="perfil"></a>
+            </div>
         </nav>
     </header>
     <main class="detPeliMain">
         
         <section class="detPeli">
             <div>
-                <img class="hp3" src="../img/HP3.jpg" alt="HP3">
+                <img src="../img/HP3.jpg" alt="HP3">
             </div>
             <div class="detPeli__descrip">
                 <h2>Harry Potter y el prisionero de Azkaban</h2>
@@ -60,7 +118,24 @@
         
     </main>
     <footer>
-        <h5>INTEGRANTES</h5>
+        <div class="footer-contenedor">
+            <div class="redes-icons">
+                <i class='bx bxl-instagram'></i>
+                <i class='bx bxl-facebook-square'></i>
+                <i class='bx bxl-twitter'></i>
+                <i class='bx bxl-youtube'></i>
+            </div>
+            <div class="condiciones">
+                <ul>
+                    <li><p>Condiciones de uso</p></li>
+                    <li><p>Políticas y privacidad</p></li>
+                    <li><p>Contacto</p></li>
+                </ul>
+            </div>
+            <div class="copy">
+                <p>Copyright <i class='bx bx-copyright'></i> 2024 UNLIX programación web</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

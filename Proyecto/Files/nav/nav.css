@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*NAV*/
+header {
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  color: #ffffff;
+  font-family:Arial, Helvetica, sans-serif;
+}
+nav {
+  background-color: #000000;
+  width: 100%;
+  border-bottom: 1px solid #9456E5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0px;
+  height: 100%;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav .logo img {
+  width: 25%;
+}
+
+nav .logo ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+nav .logo ul li {
+  padding: 2px 15px;
+}
+
+nav .logo ul a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+nav .logo ul i {
+  color: #ffffff;
+  padding: 3px;
+  font-weight: bold;
+}
+
+.logo ul i:hover {
+  color: #ee660c;
+  cursor: pointer;
+}
+
+.logo li .inicio {
+  color: #ee660c;
+}
+
+.color:hover{
+  color: #ee660c;
+}
+
+.logo li a i:hover {
+  color: #ee660c;
+}
+
+.ul-second {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  padding: 0;
+  margin-top: 3px;
+  list-style: none;
+  color: #000000;
+  border-radius: 3%;
+}
+.generos:hover .ul-second {
+  display: block;
+}
+
+.generos {
+  list-style: none;
+  position: relative;
+  height: 100%;
+  --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.ul-second {
+  clip-path: var(--clip);
+}
+
+.generos:hover {
+  --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.generos-items {
+  margin-bottom: 20px;
+}
+
+
+/*EL BUSCADOR*/
+nav .buscar-pelicula {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buscar-pelicula input {
+  padding: 3px 0px;
+  background-color: #000000;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+.buscar-pelicula input::placeholder {
+  color: #ffffff;
+  font-weight: lighter;
+}
+.buscar-pelicula i {
+  color: #ffffff;
+  margin-left: 20px;
+}
+
+.buscar-pelicula .linea-buscar {
+  background: #000000;
+  border-bottom: 1.5px solid #ffffff;
+  margin-right: 20px;
+}
+
+.buscar-pelicula img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+/*EL BUSCADOR*/

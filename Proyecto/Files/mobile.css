@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 1280px) {
     
     .detPeliMain { 
         margin: 0em 0em;
@@ -35,6 +35,9 @@
         max-width: 100%;
         height: auto;
     }
+    .detPeli div img {
+        width: 100%;
+    }
     /*IMAGENES*/
     h5 {
         font-size: 1.5em;
@@ -48,4 +51,5 @@
         height: 10em;
     }
 
+    
 }

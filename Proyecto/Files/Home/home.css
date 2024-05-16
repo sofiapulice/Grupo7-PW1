@@ -21,77 +21,7 @@ body {
     grid-template-rows: 1fr 7fr 1fr;
 }
 
-.nav {
-    display: flex;
-    width: 100%;
-    justify-content:space-evenly ;
-    align-items: center;
-    gap: 15rem;
-}
 
-
-
-.nav__titulo {
-    font-size: 1.5em;
-}
-
-
-
-.nav__left__opciones-menu {
-    display: flex;
-    align-items: center;
-
-}
-
-.nav__left__opciones-menu {
-    gap: 2rem;
-    font-size: 0.8em;
-}
-
-.nav__links {
-    color: #d3d3d3;
-}
-
-.nav__links:hover {
-    color: #ffffff;
-    transition: 0.3s;
-}
-
-.nav__links:focus {
-    transition: none;
-    font-size: 1.2em;
-    color: white;
-    text-decoration: underline;
-}
-
-.nav__right,
-.nav__titulo,
-.nav__right__input input,
-.nav__search,
-.nav__right__input input::placeholder {
-    color: white;
-}
-
-.nav__right {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.nav__right__input input {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid white;
-}
-
-
-.nav__right__input input:focus {
-    outline: none;
-}
-
-.nav__right__input {
-    font-size: 14px;
-}
 
 .foto_perfil {
     height: 32px;
@@ -106,8 +36,8 @@ body {
     align-items: flex-end;
 }
 
-.nav,.Main{
-    background-image: url(/Proyecto/Files/img/portada.jpg);
+.Main{
+    background-image: url(../img/portada.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
