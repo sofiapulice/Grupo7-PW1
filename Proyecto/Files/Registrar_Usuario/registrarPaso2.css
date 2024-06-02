@@ -11,7 +11,7 @@
 }
 
 body {
-    background-image: url(../../Images/vistaLogin.jpg);
+    background-image: url(/Proyecto/Images/vistaLogin.jpg);
     color: white;
 }
 .titulos .titulo-secundario {

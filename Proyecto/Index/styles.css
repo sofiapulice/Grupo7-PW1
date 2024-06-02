@@ -1,21 +1,16 @@
-@font-face {
-    font-family: 'roboto';
-    src: url(/Proyecto/Fonts/Roboto-Regular.ttf);
-}
-
 * {
     margin: 0px;
     padding: 0px;
-    font-family: 'roboto';
+    font-family: sans-serif;
 }
 
 body {
-    background-image: url(../../Images/vistaLogin.jpg);
+    background-image: url(../Images/Background.jpg);
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: cover;
-    
+    background-attachment: fixed;
+
 }
 
 .logo {
@@ -89,7 +84,7 @@ body {
     background-color: rgb(255, 98, 0);
 }
 
-.form{
+.form {
     display: flex;
     flex-direction: column;
     justify-content: center;

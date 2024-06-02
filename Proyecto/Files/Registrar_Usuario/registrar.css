@@ -15,9 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url(../../Images/vistaLogin.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url(/Proyecto/Images/vistaLogin.jpg);
 }
 
 main {
