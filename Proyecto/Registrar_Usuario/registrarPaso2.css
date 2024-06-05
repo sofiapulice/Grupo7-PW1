@@ -1,28 +1,31 @@
-@font-face {
-    font-family: 'roboto';
-    src: url(/Proyecto/Fonts/Roboto-Regular.ttf);
-}
-
 * {
     margin: 0px;
     padding: 0px;
-    font-family: 'roboto';
+    font-family: sans-serif;
     box-sizing: border-box;
 }
 
-body {
+html,body {
+    height: 100vh;
     background-image: url(/Proyecto/Images/vistaLogin.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     color: white;
 }
 .titulos .titulo-secundario {
     color: white;
 }
-
+.titulos{
+    text-align: center;
+}
 .logo-header {
     width: 50px;
 }
 
 .header {
+    height: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,18 +41,16 @@ body {
     color: #ff6600;
 }
 
-.tarjetas {
-
-    padding-top: 5px;
-    display: flex;
-    justify-content: center;
-}
-
 .tarjeta {
     height: 30px;
 }
 
+main{
+    height: 100%;
+}
+
 .contenedor {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,7 +58,11 @@ body {
 }
 
 .contenedor-head {
-    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
 .titulo {

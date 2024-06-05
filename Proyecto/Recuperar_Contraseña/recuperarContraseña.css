@@ -68,7 +68,7 @@ body {
   outline: none;
 }
 
-.btn .enviar{
+.btn .enviar {
   flex-basis: 48%;
   border-radius: 7px;
   font-family: "Roboto", sans-serif;
@@ -83,7 +83,8 @@ body {
   font-size: 15px;
 }
 
-.btn .cancelar{
+.btn .cancelar {
+  padding: 0;
   flex-basis: 48%;
   border-radius: 7px;
   font-family: "Roboto", sans-serif;
@@ -92,7 +93,6 @@ body {
   font-weight: bold;
   border: none;
   background-color: #ee660c;
-  width: 100%;
   height: 40px;
   cursor: pointer;
   font-size: 15px;
@@ -106,19 +106,29 @@ body {
   display: flex;
 }
 
-a{
+a {
   text-decoration: none;
   color: #ffffff;
   margin-left: 1%;
 }
 
-.wrapper p a{
+.wrapper p a {
   color: #ee660c;
   font-weight: bold;
 }
-.wrapper p a:hover{
+
+.wrapper p a:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.cancelar a {
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  margin: 0;
+  display: grid;
+  place-items: center;
 }
 
 @media screen and (width < 400px) {
@@ -126,21 +136,25 @@ a{
     width: 250px;
     padding: 1px 20px;
   }
+
   .wrapper h1 {
     font-size: 27px;
   }
+
   .wrapper .input-box {
     height: 40px;
     margin: 25px 0;
   }
+
   .wrapper .enviar {
     height: 30px;
   }
+
   .wrapper .cancelar {
     height: 30px;
   }
+
   .wrapper .inicio-link p {
     font-size: 12px;
   }
 }
-

@@ -2,136 +2,91 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Unflix --Home</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="home.css" />
-    <link rel="stylesheet" href="../Footer/estiloFooter.css">
-    <link rel="stylesheet" href="../nav/nav.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unflix -Home</title>
+    <link rel="stylesheet" href="./home.css">
+    <link rel="icon" href="../Images/Brand.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-    <div class="contenedor">
-
-        <header>
-            <nav>
-                <div class="logo">
-                    <img src="../nav/img/logo.png" alt="logoUnflix">
-                    <ul class="cont-ul">
-                        <li>
-                            <a class="inicio" href="./inicio.html(AGREGAR CUANDO ESTE HECHO)">Inicio</a>
-                        </li>
-                        <li>
-                            <a class="color" href="../peliculas/detPeli.html">Peliculas</a>
-                        </li>
-                        <li>
-                            <a class="color" href="../series/detSerie.html">Series</a>
-                        </li>
-                        <li class="generos">
-                            <a class="generos-items">Categoría</a><i class='bx bx-chevron-down'></i>                      
-                            <ul class="ul-second">
-                                <li class="menu-inside">
-                                    <a class="generos-items generos-items--inside" href="./peliculasAccion(AGREGAR CUANDO ESTE HECHO)">Acción</a>
-                                </li>
-                                <li class="menu-inside">
-                                    <a class="generos-items generos-items--inside" href="./peliculasAventura">Aventura</a>
-                                </li>
-                                <li class="menu-inside">
-                                    <a class="generos-items generos-items--inside" href="./peliculasFiccion">Ciencia ficción</a>
-                                </li>
-                                <li class="menu-inside">
-                                    <a class="generos-items generos-items--inside" href="./peliculascomedia">Comedia</a>
-                                </li>
-                                <li class="menu-inside">
-                                    <a  class="generos-items generos-items--inside"href="./peliculasdrama">Drama</a>
-                                </li>
-                                <li class="menu-inside">
-                                    <a  class="generos-items generos-items--inside"href="./peliculasfantasia">Fantasía</a>
-                                </li>
-                                <li class="menu-inside">
-                                    <a class="generos-items generos-items--inside" href="./peliculasromance">Romance</a>
-                                </li>
-                                <li class="menu-inside">
-                                    <a class="generos-items generos-items--inside" href="./peliculasAsuspenso">Suspenso</a>
-                                </li>
-                                <li class="menu-inside">
-                                    <a class="generos-items generos-items--inside" href="./peliculasterror">Terror</a>
-                                </li>
-                            </ul> 
-                        </li>
-                    </ul>
-                </div>
-                <div class="buscar-pelicula">
-                    <div class="linea-buscar">
-                        <form action="ejemplo.html(AGREGAR CUANDO ESTE HECHO)" method="get">
-                            <input type="text" placeholder="Buscar...">
-                            <i class='bx bx-search'></i>
-                        </form>
-                    </div>
-                    <a href="../perfil/perfil.html"><img src="../img/perfil.PNG" alt="perfil"></a>
-                </div>
+    <header class="header">
+        <div class="header left">
+            <div class="header logo-titulo">
+                <a href="../Home/home.html"><img src="../Images/Brand.png" alt="logo" class="logo"></a>
+                <a href="../Home/home.html">UNFLIX</a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="../Peliculas/detPeli.html">Peliculas</a></li>
+                    <li><a href="../Series/detSerie.html">Series</a></li>
+                    <li><a href="#">Generos</a></li>
+                </ul>
             </nav>
-        </header>
+        </div>
+        <div class="header right">
+            <div class="form">
+                <form action="#">
+                    <input type="text" name="busqueda-pelicula" id="busqueda-pelicula" placeholder="Buscar">
+                    <a href="#"><i class="bi bi-search"></i></a>
+                </form>
+            </div>
+            <div class="perfil">
+                <a href="../perfil/perfil.html"><img src="../img/perfil.png" alt="Foto de perfil"
+                        class="foto-perfil"></a>
+            </div>
+        </div>
 
-        <main class="Main">
-
-            <div class="Main__grilla">
-                <div class="Main__grilla_header">
-                    <h2 class="titulo__populares">Populares</h2>
-                    <a class="titulo_link" href="#">Ver más</a>
+    </header>
+    <main class="main">
+        <div class="grilla">
+            <div class="grilla--titulo">
+                <h2>Populares</h2>
+                <a href="#">Ver más</a>
+            </div>
+            <div class="grilla--peliculas">
+                <div class="pelicula">
+                    <a href="../Peliculas/detPeliBAT2.html"><img src="./img/Batman2.jpg" alt="Batman 2"></a>
+                    <a href="../Peliculas/detPeliBAT2.html">Batman 2</a>
                 </div>
-
-                <div class="Main__grilla__peliculas">
-                    <a href="#" class="link__arrow"><i class="bi bi-chevron-double-left"></i></a>
-                    <div class="pelicula">
-                        <a href="#"><img class="cover__pelicula" src="../img/Batman2.jpg"
-                                alt="Batman"></a>
-                        <a class="titulo__pelicula" href="#">Batman</a>
-                    </div>
-                    <div class="pelicula">
-                        <a class="link_pelicula" href="#"><img class="cover__pelicula"
-                                src="../Home/img/Sin título-1.jpg" alt="Breaking-Bad"></a>
-                        <a class="titulo__pelicula" href="#">Breaking-Bad</a>
-                    </div>
-                    <div class="pelicula">
-                        <a class="link_pelicula" href="#"><img class="cover__pelicula"
-                                src="../Home/img/Sin título-2.jpg" alt="Chernobyl"></a>
-                        <a class="titulo__pelicula" href="#">Chernobyl</a>
-                    </div>
-                    <div class="pelicula">
-                        <a class="link_pelicula" href="#"><img class="cover__pelicula"
-                                src="../Home/img/Sin título-3.jpg " alt="Game of Thrones"></a>
-                        <a class="titulo__pelicula" href="#">Game of Thrones</a>
-                    </div>
-                    <div class="pelicula">
-                        <a class="link_pelicula" href="#"><img class="cover__pelicula"
-                                src="../Home/img/Sin título-4.jpg" alt="Harry-Potter"></a>
-                        <a class="titulo__pelicula" href="#">Harry-Potter</a>
-                    </div>
-                    <a href="#" class="link__arrow"><i class="bi bi-chevron-double-right"></i>
-                    </a>
+                <div class="pelicula">
+                    <a href="../Series/detSerieBrbd.html"><img src="./img/Sin título-1.jpg" alt="Breaking Bad"></a>
+                    <a href="../Series/detSerieBrbd.html">Breaking Bad</a>
                 </div>
-
+                <div class="pelicula">
+                    <a href="../Series/detSerieChern.html"><img src="./img/Sin título-2.jpg" alt="Chernobyl"></a>
+                    <a href="../Series/detSerieChern.html">Chernobyl</a>
+                </div>
+                <div class="pelicula">
+                    <a href="../Series/detSerieHod.html"><img src="./img/Sin título-3.jpg" alt="Game of Thrones"></a>
+                    <a href="../Series/detSerieHod.html">Game <br>of Thrones</a>
+                </div>
+                <div class="pelicula">
+                    <a href="../Peliculas/detPeliSA3.html"><img src="./img/SANI.jpg" alt="Señor de los Anillos"></a>
+                    <a href="../Peliculas/detPeliSA3.html">Señor <br> de los Anillos</a>
+                </div>
             </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer--icons">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-twitter-x"></i>
+            <i class="bi bi-youtube"></i>
+        </div>
+        <div class="footer--condiciones">
+            <a href="#">Conditions of use</a>
+            <a href="#">Privacy & policy</a>
+            <a href="#">Press room</a>
+        </div>
+        <div class="footer--derechos-reservados">
+            <i class="bi bi-c-circle"></i>
+            <h2>2024 Unflix Programacion Web I</h2>
+        </div>
+    </footer>
 
-        </main>
-
-        <footer class="Footer">
-            <div class="Footer__redes-sociales">
-                <i class="bi bi-facebook"></i>
-                <i class="bi bi-instagram"></i>
-                <i class="bi bi-twitter-x"></i>
-                <i class="bi bi-youtube"></i>
-            </div>
-            <div class="Footer__terminos-condiciones">
-                <a href="#" class="termino-condicion">Conditions of Use</a>
-                <a href="#" class="termino-condicion">Privacy & Policy</a>
-                <a href="#" class="termino-condicion">Press Room</a>
-            </div>
-        </footer>
-
-    </div>
+</body>
 
 </html>

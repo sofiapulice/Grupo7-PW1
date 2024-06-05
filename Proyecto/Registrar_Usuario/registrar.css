@@ -1,29 +1,20 @@
-@font-face {
-  font-family: "roboto";
-  src: url(/Proyecto/Fonts/Roboto-Regular.ttf);
-}
-
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: "roboto";
+  font-family: sans-serif;
 }
 
+html,
 body {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   background-image: url(/Proyecto/Images/vistaLogin.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
 .logo-header {
   width: 50px;
@@ -43,11 +34,11 @@ main {
 }
 
 .header {
+  height: 10%;
   padding: 10px 30px 10px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
 }
 
 .link.logo {
@@ -59,20 +50,24 @@ main {
   align-items: center;
   gap: 5px;
 }
+
 .titulo.sub2 {
   font-size: 20px;
 }
 
-.contenedor {
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
+main {
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 
 .box {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: center;
 }
 
 .subtitulo.sub2 {
@@ -111,16 +106,9 @@ main {
   width: 350px;
 }
 
-.input:hover {
-  border: 2px solid #ff6600ab;
-  box-shadow: 4px 4px 0px 0px #00000020;
-  border-radius: 10px;
-  height: 45px;
-  width: 400px;
-}
-
 .input:focus {
   outline: none;
+  border: 1px solid orange;
 }
 
 .boton:focus {
