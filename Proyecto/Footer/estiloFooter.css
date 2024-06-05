@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+footer a{
+    text-decoration: none;
+    color: #ffffff;
+}
 footer{
     background-color: #000000;
     font-family: 'roboto',sans-serif;
