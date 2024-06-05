@@ -23,7 +23,7 @@ body {
 .link {
   color: #000000;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   letter-spacing: 1px;
   color: #ff6600;
@@ -34,21 +34,15 @@ body {
 }
 
 .header {
-  height: 10%;
   padding: 10px 30px 10px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 5rem;
 }
 
 .link.logo {
   font-size: 20px;
-}
-
-.logo-titulo {
-  display: flex;
-  align-items: center;
-  gap: 5px;
 }
 
 .titulo.sub2 {
@@ -56,7 +50,6 @@ body {
 }
 
 main {
-  height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
