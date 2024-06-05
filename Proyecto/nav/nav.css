@@ -1,399 +1,185 @@
-<<<<<<< HEAD:Proyecto/Files/nav/nav.css
 * {
   margin: 0;
   padding: 0;
 }
-
-/*NAV*/
-header {
-  font-size: 18px;
-  font-weight: bold;
-  font-style: normal;
-  color: #ffffff;
-  font-family:Arial, Helvetica, sans-serif;
+body {
+  height: 100vh;
 }
-nav {
-  background-color: #000000;
-  width: 100%;
-  border-bottom: 1px solid #9456E5;
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 0px;
-  height: 100%;
+  padding: 3px 10px;
+  font-family: sans-serif;
+  background-color: black;
 }
 
-nav .logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.header .logo-titulo a {
+  color: #9456e5;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-nav .logo img {
-  width: 25%;
+.header .logo-titulo img {
+  width: 50px;
+  height: 40px;
 }
 
-nav .logo ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
+.logo,
+.foto-perfil {
+  height: 3rem;
 }
 
-nav .logo ul li {
-  padding: 2px 15px;
+.left {
+  gap: 5rem;
 }
 
-nav .logo ul a {
+.left a {
   text-decoration: none;
-  color: #ffffff;
-  font-weight: bold;
 }
 
-nav .logo ul i {
-  color: #ffffff;
-  padding: 3px;
-  font-weight: bold;
-}
-
-.logo ul i:hover {
-  color: #ee660c;
-  cursor: pointer;
-}
-
-.logo li .inicio {
-  color: #ee660c;
-}
-
-.color:hover{
-  color: #ee660c;
-}
-
-.logo li a i:hover {
-  color: #ee660c;
-}
-
-.ul-second {
-  display: none;
-  position: absolute;
-  background-color: #000000;
-  padding: 0;
-  margin-top: 3px;
-  list-style: none;
-  color: #000000;
-  border-radius: 3%;
-}
-.generos:hover .ul-second {
-  display: block;
-}
-
-.generos {
-  list-style: none;
-  position: relative;
-  height: 100%;
-  --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
-}
-
-.ul-second {
-  clip-path: var(--clip);
-}
-
-.generos:hover {
-  --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-.generos-items {
-  margin-bottom: 20px;
-}
-
-
-/*EL BUSCADOR*/
-nav .buscar-pelicula {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.buscar-pelicula input {
-  padding: 3px 0px;
+.form input {
   background-color: #000000;
   border: none;
+  border-bottom: 1px solid white;
   outline: none;
-  color: #ffffff;
-  margin-right: 10px;
 }
 
-.buscar-pelicula input::placeholder {
-  color: #ffffff;
-  font-weight: lighter;
-}
-.buscar-pelicula i {
-  color: #ffffff;
-  margin-left: 20px;
-}
-
-.buscar-pelicula .linea-buscar {
-  background: #000000;
-  border-bottom: 1.5px solid #ffffff;
-  margin-right: 20px;
-}
-
-.buscar-pelicula img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-/*EL BUSCADOR*/
-=======
-* {
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  font-family: "Roboto", serif;
-  font-size: 12px;
-  font-weight: bold;
-  color: #ffffff;
-  width: 100%;
-  height: 100%;
-  background-color: #000000;
-  margin-left: 0; 
-  margin-right: 0;
-}
-
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-nav .logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-nav .logo img {
-  width: 25%;
-}
-
-nav .logo ul {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  list-style: none;
-}
-
-nav .logo ul li {
-  padding: 2px 15px;
-}
-
-nav .logo ul a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-nav .logo ul i {
-  color: #ffffff;
-  padding: 3px;
-  font-weight: bold;
-}
-
-.logo ul i:hover {
-  color: #ee660c;
-  cursor: pointer;
-}
-
-.logo li .inicio {
-  color: #ee660c;
-}
-
-.color:hover {
-  color: #ee660c;
-}
-
-.logo li a i:hover {
-  color: #ee660c;
-}
-
-.ul-second {
-  display: none;
+.items {
   position: absolute;
-  background-color: #000000;
-  padding: 0;
-  margin-top: 3px;
-  list-style: none;
-  color: #000000;
-  border-radius: 3%;
-}
-
-.generos:hover .ul-second {
-  display: block;
-}
-
-.generos {
-  list-style: none;
-  position: relative;
-  height: 100%;
-  --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
-  margin-bottom: 1%;
-}
-
-.ul-second {
-  clip-path: var(--clip);
-}
-
-.generos:hover {
-  --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-.generos-items {
-  margin-bottom: 20px;
-}
-
-nav .buscar-pelicula {
-  position: relative;
+  left: 50%;
+  transform: translate(-50%);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
-.buscar-pelicula input {
-  padding: 3px 0px;
-  background-color: #000000;
-  border: none;
-  outline: none;
+.items li {
+  list-style: none;
+}
+
+.items a {
   color: #ffffff;
-  margin-right: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.buscar-pelicula input::placeholder {
+.items a:hover {
+  color: #ee660c;
+}
+
+.items .color a {
   color: #ffffff;
-  font-weight: lighter;
 }
 
-.buscar-pelicula i {
-  color: #ffffff;
-  margin-left: 20px;
+.items .home a {
+  color: #ee660c;
 }
 
-.buscar-pelicula .linea-buscar {
-  background: #000000;
-  border-bottom: 1.5px solid #ffffff;
-  margin-right: 20px;
-  margin-bottom: 10px;
+.right {
+  gap: 1rem;
 }
 
-.buscar-pelicula img {
-  width: 35px;
-  height: 35px;
+.foto-perfil {
   border-radius: 50%;
-  margin-right: 10px;
 }
 
-@media screen and (width < 1000px) {
-  header {
-  margin-left: 30px;
-}
+.left a,
+.form i,
+input {
+  color: #ffffff;
 }
 
-@media screen and (width < 750px) {
-  
-  header{
-    font-size: 9px;
+.header a {
+  font-size: 0.9rem;
+}
+
+.form ::placeholder {
+  position: relative;
+  bottom: 2px;
+}
+
+@media screen and (width < 860px) {
+  .items {
+    transform: translate(-70%);
   }
-  nav .logo img {
-    width: 18%;
-    margin-right: 15px;
+}
+
+@media screen and (width < 770px) {
+  .items {
+    transform: translate(-50%);
+    gap: 1rem;
   }
-  nav .logo ul li {
-    padding: 1px 10px;
+  .items li {
+    margin-top: 40px;
   }
-  .generos {
-    margin-bottom: 0.5%;
+  .header {
+    padding: 5px 8px;
   }
-  .buscar-pelicula input {
-    padding: 2px 0px;
-    margin-right: 20px;
+  .header .logo-titulo a {
+    font-size: 15px;
   }
-  
-  .buscar-pelicula i {
-    margin-left: 0px;
-  }
-  
-  .buscar-pelicula .linea-buscar {
-    background: #000000;
-    border-bottom: 1.5px solid #ffffff;
-    margin-right: 0px;
-  }
-  
-  .buscar-pelicula input::placeholder {
-    font-size: 9px;
-  }
-  .buscar-pelicula img {
-    width: 25px;
+
+  .header .logo-titulo img {
+    width: 35px;
     height: 25px;
-    margin-left: 20px;
   }
-  
-}
 
-@media screen and (width < 630px) {
-  .buscar-pelicula .linea-buscar {
-    width: 100px;
+  .items a {
+    font-size: 13px;
   }
-  .buscar-pelicula input::placeholder {
-    font-size: 8px;
-    margin-top: 20px;
+  .logo,
+  .foto-perfil {
+    height: 2rem;
   }
-  .buscar-pelicula input {
-    width: 60px; 
-    margin-top: 5px;
+  .form input {
+    width: 120px;
   }
-  .buscar-pelicula i {
-    margin-top: 5px;
-    margin-left: 7px;
-  }
-  .generos {
-    margin-bottom: 0.3%;
+  .form i{
+    font-size: 0.8rem; 
+}
+  .form ::placeholder {
+    position: relative;
+    bottom: 2px;
+    font-size: 12px;
   }
 }
 
-@media screen and (width < 440px) {
-  header{
-    font-size: 6px;
+@media screen and (width < 430px) {
+  .header {
+    padding: 5px 5px;
   }
-  nav .logo img {
-    width: 14%;
-    margin-right: 12px;
+  .header .logo-titulo a {
+    font-size: 13px;
   }
-  .buscar-pelicula input::placeholder {
-    font-size: 6px;
-  }
-  .buscar-pelicula img {
-    width: 20px;
+
+  .header .logo-titulo img {
+    width: 30px;
     height: 20px;
-    margin-left: 15px;
   }
-  .buscar-pelicula .linea-buscar {
-    width: 70px;
+
+  .items a {
+    font-size: 11px;
   }
-  
-  .buscar-pelicula input {
-    width: 30px; 
-    margin-top: 5px;
+
+  .logo,
+  .foto-perfil {
+    height: 1.7rem;
   }
-  .buscar-pelicula i {
-    margin-top: 5px;
-    margin-left: 7px;
+
+.form i{
+    font-size: 0.7rem; 
+}
+
+  .form input {
+    width: 80px; 
   }
-  .generos {
-    margin-bottom: 0.2%;
+
+  .form ::placeholder {
+    position: relative;
+    bottom: 2px;
+    font-size: 11px;
   }
 }
->>>>>>> 0caa1f9570ee29a4dbf3a834b0b624a140ed12c0:Proyecto/Files/nav/css/nav.css
