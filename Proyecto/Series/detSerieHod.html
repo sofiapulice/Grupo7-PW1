@@ -1,85 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../peliculas/detPeli.css">
-    <link rel="stylesheet" href="../mobile.css">
-    <link rel="stylesheet" href="../nav/nav.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../Footer/estiloFooter.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!--TIPOGRAFÍA PARA LOS TÍTULOS-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-    <!--TIPOGRAFÍA PARA EL TEXTO EN GENERAL-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Serif:ital,opsz,wdth@0,8..144,50..150;1,8..144,50..150&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
-    <title>House of Dragon</title>
-</head>
-<body>
-    
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="../nav/img/logo.png" alt="logoUnflix">
-                <ul class="cont-ul">
-                    <li>
-                        <a class="inicio" href="../Home/home.html">Inicio</a>
-                    </li>
-                    <li>
-                        <a class="color" href="./Peliculas.html(AGREGAR CUANDO ESTE HECHO)">Peliculas</a>
-                    </li>
-                    <li>
-                        <a class="color" href="./series.html(AGREGAR CUANDO ESTE HECHO)">Series</a>
-                    </li>
-                    <li class="generos">
-                        <a class="generos-items">Categoría</a><i class='bx bx-chevron-down'></i>                      
-                        <ul class="ul-second">
-                            <li class="menu-inside">
-                                <a class="generos-items generos-items--inside" href="./peliculasAccion(AGREGAR CUANDO ESTE HECHO)">Acción</a>
-                            </li>
-                            <li class="menu-inside">
-                                <a class="generos-items generos-items--inside" href="./peliculasAventura">Aventura</a>
-                            </li>
-                            <li class="menu-inside">
-                                <a class="generos-items generos-items--inside" href="./peliculasFiccion">Ciencia ficción</a>
-                            </li>
-                            <li class="menu-inside">
-                                <a class="generos-items generos-items--inside" href="./peliculascomedia">Comedia</a>
-                            </li>
-                            <li class="menu-inside">
-                                <a  class="generos-items generos-items--inside"href="./peliculasdrama">Drama</a>
-                            </li>
-                            <li class="menu-inside">
-                                <a  class="generos-items generos-items--inside"href="./peliculasfantasia">Fantasía</a>
-                            </li>
-                            <li class="menu-inside">
-                                <a class="generos-items generos-items--inside" href="./peliculasromance">Romance</a>
-                            </li>
-                            <li class="menu-inside">
-                                <a class="generos-items generos-items--inside" href="./peliculasAsuspenso">Suspenso</a>
-                            </li>
-                            <li class="menu-inside">
-                                <a class="generos-items generos-items--inside" href="./peliculasterror">Terror</a>
-                            </li>
-                        </ul> 
-                    </li>
-                </ul>
-            </div>
-            <div class="buscar-pelicula">
-                <div class="linea-buscar">
-                    <form action="ejemplo.html(AGREGAR CUANDO ESTE HECHO)" method="get">
-                        <input type="text" placeholder="Buscar...">
-                        <i class='bx bx-search'></i>
-                    </form>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../peliculas/detPeli.css">
+        <link rel="stylesheet" href="../nav/nav.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="../Footer/estiloFooter.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <!--TIPOGRAFÍA PARA LOS TÍTULOS-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+        <!--TIPOGRAFÍA PARA EL TEXTO EN GENERAL-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Serif:ital,opsz,wdth@0,8..144,50..150;1,8..144,50..150&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+        <title>Game of Thrones</title>
+    </head>
+    <body>
+        <header>
+            <nav class="header">
+                <div class="header left">
+                    <div class="header logo-titulo">
+                        <a href="../Home/home.html"><img src="../Images/Brand.png" alt="logo" class="logo"></a>
+                        <a href="../Home/home.html">UNFLIX</a>
+                    </div>
                 </div>
-                <a href="../perfil/perfil.html"><img src="../img/perfil.PNG" alt="perfil"></a>
-            </div>
-        </nav>
-    </header>
+    
+                <div class="items">
+                    <li>
+                        <a class="home" href="../Home/home.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="color" href="../Peliculas/detPeliBAT2.html">Peliculas</a>
+                    </li>
+                    <li>
+                        <a class="color" href="../Series/detSerieBrbd.html">Series</a>
+                    </li>
+                    <li>
+                        <a class="color" href="../Series/detSerie.html">Géneros</a>
+                    </li>
+                </div>
+    
+    
+                <div class="header right">
+                    <div class="form">
+                        <form action="#">
+                            <input type="text" name="busqueda-pelicula" id="busqueda-pelicula" placeholder="Buscar">
+                            <a href="#"><i class="bi bi-search"></i></a>
+                        </form>
+                    </div>
+    
+                    <div class="perfil">
+                        <a href="../perfil/perfil.html"><img src="../img/perfil.png" alt="Foto de perfil"
+                                class="foto-perfil"></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
     <main class="detPeliMain">
         
         <section class="detPeli">

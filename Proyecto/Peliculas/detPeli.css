@@ -126,3 +126,63 @@ option {
     font-size: 1.1em;
     border-radius: 5px;
 }
+
+/* MOBILE */
+@media (min-width: 200px) and (max-width: 1280px) {
+    
+    .detPeliMain { 
+        margin: 0em 0em;
+    }
+    .detPeli {
+        display: flex;
+        flex-direction: column;
+    }
+    .detPeli__descrip {
+        margin: 0%;
+    }
+    li {
+        margin: 0.3em 0em;
+    }
+    p {
+        margin-top: 0.3em;
+    }
+    h2 {
+        display: none;
+    }
+
+    /*BOTONES*/
+    .detPeli__descrip .button {
+        margin-top: 2em;
+    }
+    .button a {
+        padding: 0.25em 0.25em;
+        margin: 0em 0em;
+    }
+    
+    /*BOTONES*/
+    /*IMAGENES*/
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    .detPeli div img {
+        width: 100%;
+    }
+    /*IMAGENES*/
+    h5 {
+        font-size: 1.5em;
+        margin: 1em 0em;
+    }
+    .otrasPelis {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .otrasPelis img {
+        height: 10em;
+    }
+
+    .detPeli__iframe {
+        display: none;
+    }
+    
+}
