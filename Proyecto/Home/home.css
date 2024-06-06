@@ -183,12 +183,20 @@ input {
 
 
 @media screen and (max-width:1440px) {
-    .form input {
-        display: none;
-    }
-
+    
     .grilla--peliculas img {
         height: 7rem;
     }
+}
 
+@media screen and (width < 600px) {
+    .grilla--peliculas {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grilla--peliculas img {
+        height: 20rem; 
+    }
 }
