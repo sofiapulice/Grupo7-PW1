@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+.header a{
+    font-family: sans-serif;
+}
 body{
     background-color: black;
     color: #fff;
@@ -43,9 +46,7 @@ a{
     text-decoration: none;
     color: #fff;
 }
-li a:hover {
-    text-decoration: underline;
-}
+
 .button a:hover{
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     background-color: #751de7;
@@ -72,7 +73,6 @@ h5 {
 li{
     font-family: "PT Serif", serif;
     font-weight: 400;
-    font-style: italic;
     margin: 1em 0em;
     list-style-type: none;
     text-align: left;
@@ -80,7 +80,6 @@ li{
 p{
     font-family: "PT Serif", serif;
     font-weight: 400;
-    font-style: italic;
 }
 /*IFRAME PELIS*/
 .detPeli__iframe {
@@ -126,6 +125,8 @@ option {
     font-size: 1.1em;
     border-radius: 5px;
 }
+
+
 
 /* MOBILE */
 @media (min-width: 200px) and (max-width: 1280px) {
