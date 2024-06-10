@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* overflow: hidden; */
 }
 
 footer a{
@@ -18,7 +19,7 @@ footer{
 
 .footer-contenedor{
     width: 100%;
-    padding: 50px 30px 50px;
+    height: auto;
 }
 
 .redes-icons{

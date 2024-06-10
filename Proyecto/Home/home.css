@@ -196,22 +196,26 @@ input {
 }
 
 @media screen and (width < 600px) {
-    .grilla--peliculas {
+    /* .grilla--peliculas {
  
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
         box-sizing: border-box;
-    }
-
-    .grilla--peliculas img {
+    } */
+    .main {
         height: auto;
-        max-width: 100%; 
-
+        margin-top: 2em;
+    }
+    .grilla--peliculas {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .grilla--peliculas img {
+        height: auto;
+        max-width: 100%;  
     }
 
     .grilla--peliculas img {
@@ -222,8 +226,7 @@ input {
         margin-top: 20px;
     }
     .main {
-        margin-top:  93.75rem; 
+        /* margin-top:  93.75rem;  */
         background-image: none;
-
     }
 }
