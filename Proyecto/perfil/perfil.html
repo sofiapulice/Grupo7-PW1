@@ -4,128 +4,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil</title>
+    <title>Unflix -Perfil</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./perfil.css">
     <link rel="stylesheet" href="../nav/nav.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="perfil.css">
+    
 </head>
 
 <body>
-    <nav>
-        <div class="logo">
-            <img src="../nav/img/logo.png" alt="logoUnflix">
-            <ul class="cont-ul">
-                <li>
-                    <a class="color" href="../Home/home.html">Inicio</a>
-                </li>
-                <li>
-                    <a class="color" href="../peliculas/detPeli.html">Peliculas</a>
-                </li>
-                <li>
-                    <a class="color" href="../series/detSerie.html">Series</a>
-                </li>
-                <li class="generos">
-                    <a class="generos-items">Géneros</a><i class='bx bx-chevron-down'></i>
-                    <ul class="ul-second">
-                        <li class="menu-inside">
-                            <a class="generos-items generos-items--inside" href="./peliculasAccion">Acción</a>
-                        </li>
-                        <li class="menu-inside">
-                            <a class="generos-items generos-items--inside" href="./peliculasAventura">Aventura</a>
-                        </li>
-                        <li class="menu-inside">
-                            <a class="generos-items generos-items--inside" href="./peliculasFiccion">Ciencia ficción</a>
-                        </li>
-                        <li class="menu-inside">
-                            <a class="generos-items generos-items--inside" href="./peliculascomedia">Comedia</a>
-                        </li>
-                        <li class="menu-inside">
-                            <a class="generos-items generos-items--inside" href="./peliculasdrama">Drama</a>
-                        </li>
-                        <li class="menu-inside">
-                            <a class="generos-items generos-items--inside" href="./peliculasfantasia">Fantasía</a>
-                        </li>
-                        <li class="menu-inside">
-                            <a class="generos-items generos-items--inside" href="./peliculasromance">Romance</a>
-                        </li>
-                        <li class="menu-inside">
-                            <a class="generos-items generos-items--inside" href="./peliculasAsuspenso">Suspenso</a>
-                        </li>
-                        <li class="menu-inside">
-                            <a class="generos-items generos-items--inside" href="./peliculasterror">Terror</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="buscar-pelicula">
-            <div class="linea-buscar">
-                <form action="ejemplo.html" method="get">
-                    <input type="text" placeholder="Buscar...">
-                    <i class='bx bx-search'></i>
-                </form>
-            </div>
-            <a href="perfil.html"><img src="../nav/img/perfil.PNG" alt="perfil"></a>
-        </div>
-    </nav>
-    <div class="contenedor">
-        <div class="perfil">
-            <div class="img">
-                <img src="../perfil/img/perfil.PNG" alt="">
-                <h2>Usuario12345</h2>
-            </div>
-            <div class="info-user">
-                <div>
-                    <p>Email:</p>
-                    <p class="email"> usuariio123@gmail.com</p>
-                </div>
-                <div class="contraseña">
-                    <p>Contraseña:</p>
-                    <p>*******************</p>
-                </div>
-                <div>
-                    <label for="password">Nueva contraseña</label>
-                    <input type="password" id="password" placeholder="Contraseña">
-                </div>
-                <div class="confirmar-contrasenia">
-                    <label for="confirm-password">Confirmar Contraseña</label>
-                    <input type="password" id="confirm-password" placeholder="Confirmar Contraseña">
-                </div>
-            </div>
-            <div class="metodos-pago">
-                <h3>Métodos de pagos</h3>
-                <div class="opcion">
-                    <label for="metodo-pago">
-                        <input type="radio" id="tarjeta_credito" name="metodo-pago">
-                        Tarjeta de crédito
-                    </label>
-                    <div class="opcion-opcion">
-                        <input type="text" placeholder=" Número de tarjeta">
-                        <input type="number" placeholder=" XXX">
-                    </div>
-                </div>
-                <div class="opcion">
-                    <label>
-                        <input type="radio" name="metodo-pago"> Cupón de pago</label>
-                    <div class="opcion-opcion">
-                        <label><input type="checkbox"> Pago fácil</label>
-                        <label><input type="checkbox"> RapiPago</label>
-                    </div>
-                </div>
-                <div class="opcion">
-                    <label><input type="radio" name="metodo-pago"> Transferencia bancaria</label>
-                    <div class="opcion-opcion">
-                        <p>CBU: 2188999918282992000029</p>
-                    </div>
+    <header>
+        <nav class="header">
+            <div class="header left">
+                <div class="header logo-titulo">
+                    <a href="../Home/home.html"><img src="../Images/Brand.png" alt="logo" class="logo"></a>
+                    <a href="../Home/home.html">UNFLIX</a>
                 </div>
             </div>
 
-        </div>
-        <div class="btn">
-            <a href="../Home/home.html"><button class="guardar">Guardar cambios</button></a>
-            <a href="../Iniciar_Sesion/iniciarSesion.html"><button class="cancelar">Cancelar suscripción</button></a>
-        </div>
-    </div>
+            <div class="items">
+                <li>
+                    <a class="home" href="../Home/home.html">Inicio</a>
+                </li>
+                <li>
+                    <a class="color" href="../Peliculas/detPeliBAT2.html">Peliculas</a>
+                </li>
+                <li>
+                    <a class="color" href="../Series/detSerieBrbd.html">Series</a>
+                </li>
+                <li>
+                    <a class="color" href="../Series/detSerie.html">Géneros</a>
+                </li>
+            </div>
+
+
+            <div class="header right">
+                <div class="form">
+                    <form action="#">
+                        <input type="text" name="busqueda-pelicula" id="busqueda-pelicula" placeholder="Buscar">
+                        <a href="#"><i class="bi bi-search"></i></a>
+                    </form>
+                </div>
+
+                <div class="perfil">
+                    <a href="../perfil/perfil.html"><img src="../img/perfil.png" alt="Foto de perfil"
+                            class="foto-perfil"></a>
+                </div>
+            </div>
+        </nav>
+    </header>
 </body>
+<main>
+    <article class="contenedor">
+        <div class="contenedor--main">
+            <img src="../img/perfil.png" alt="Foto de perfil">
+            <div class="contenedor--datos">
+                <div class="contenedor--datos-1">
+                    <span class="datos--titulo">Datos Personales</span>
+                    <span>E-mail: user123@gmail.com</span>
+                    <span>Contraseña: **********</span>
+                    <div class="nueva--contrasenia">
+                        <label for="password">Nueva contraseña:
+                            <input type="password" name="password" id="password">
+                        </label>
+                        <label for="repetir-password">Repetir contraseña:
+                            <input type="password" name="repetir-password" id="repetir-password">
+                        </label>
+                    </div>
+                </div>
+                <div class="contenedor--datos-2">
+
+                    <div class="metodo--pago">
+                        <label for="metodo--pago" class="metodo--pago--label">Metodo de pago</label>
+                        <div class="tarjeta">
+                            <div class="tarjeta-head">
+                                <input type="radio" name="metodo--pago">
+                                <label for="tarjeta">Tarjeta de credito</label>
+                            </div>
+                            <div class="tarjeta-composiciones">
+                                <input type="number" class="numero" name="tarjeta" placeholder="1234 5678 9101 1112">
+                                <input type="number" class="codigo" name="tarjeta" placeholder="XXX">
+                            </div>
+                        </div>
+                        <div class="cupon">
+                            <div class="cupon-head">
+                                <input type="radio" name="metodo--pago">
+                                <label for="cupon">Cupon de pago</label>
+                            </div>
+                            <div class="cupon--tipos">
+                                <div>
+                                    <input type="checkbox" name="cupon">
+                                    <label for="cupon">Pago facil</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="cupon">
+                                    <label for="cupon">RapiPago</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="transferencia">
+                            <div class="transferencia-head">
+                                <input type="radio" name="metodo--pago">
+                                <label for="transferencia">Transferencia</label>
+                            </div>
+
+                            <div class="cbu">
+                                <span>CBU:7240396911100023194613</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="button-confirmar"><a href="../Home/home.html">Guardar Cambios</a></button>
+            <button class="button-cancelar"><a href="/index.html">Cancelar subscripcion</a></button>
+        </div>
+    </article>
+</main>
 
 </html>

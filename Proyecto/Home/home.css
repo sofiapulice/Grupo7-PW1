@@ -182,7 +182,13 @@ input {
 }
 
 
+
 @media screen and (max-width:1000px) {
+
+
+}
+@media screen and (max-width:1440px) {
+
     
     .grilla--peliculas img {
         height: 9rem;
@@ -191,6 +197,7 @@ input {
 
 @media screen and (width < 600px) {
     .grilla--peliculas {
+ 
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -200,5 +207,23 @@ input {
     .grilla--peliculas img {
         height: auto;
         max-width: 100%; 
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grilla--peliculas img {
+        height: 20rem; 
+        margin-bottom: 20px; 
+    }
+    .grilla--peliculas .pelicula{
+        margin-top: 20px;
+    }
+    .main {
+        margin-top:  93.75rem; 
+        background-image: none;
+
     }
 }
