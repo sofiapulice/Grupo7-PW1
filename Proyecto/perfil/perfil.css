@@ -12,6 +12,8 @@
 body{
   height: 100%;
   width: 100%;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 
@@ -58,7 +60,7 @@ main{
 .input input {
   outline: none;
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #000000;
 }
 
 .input i {
@@ -83,7 +85,7 @@ main{
 .contenedor {
   height: fit-content;
   margin: 1rem 5rem;
-  border: 1px solid #0000003a;
+  border: 1px solid #d6d3d33a;
   border-radius: 20px;
   position: relative;
 }
@@ -109,7 +111,7 @@ main{
 }
 
 .contenedor--datos-1 {
-  border: 1px solid #0000003a;
+  border: 1px solid #d6d3d33a;
   margin: 1rem;
   padding: 1rem;
   border-radius: 1rem;
@@ -128,13 +130,24 @@ main{
   text-align: center;
 }
 
+input {
+  color: #000000; 
+}
+input::placeholder {
+  color: #4646463a; 
+}
+
 
 .contenedor--datos-2 {
-  border: 1px solid #0000003a;
+  border: 1px solid #d6d3d33a;
   height: 400px;
   margin: 1rem;
   padding: 2rem;
   border-radius: 1rem;
+}
+
+.contenedor--datos-2 input{
+  color: #000000;
 }
 
 .metodo--pago {
@@ -155,12 +168,8 @@ main{
 
 .tarjeta input {
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid #d6d3d33a;
   padding: 0.5rem;
-}
-
-.tarjeta input::placeholder {
-  text-align: center;
 }
 
 .numero {
@@ -177,9 +186,10 @@ main{
 .contenedor--datos-1 input {
   outline: none;
   border-radius: 0.3rem;
-  border: 1px solid black;
+  border: 1px solid #d6d3d33a;
   padding: 0.3rem;
   margin: 1rem;
+  color: #000000;
 }
 
 .tarjeta-composiciones,
@@ -191,6 +201,14 @@ main{
 .cupon--tipos {
   display: flex;
   justify-content: space-evenly;
+}
+
+input[type="radio"] {
+  accent-color: #9456e5;
+}
+ 
+input[type="checkbox"] {
+  accent-color: #ee660c;
 }
 
 .codigo {
@@ -220,7 +238,7 @@ main{
   height: 2.5rem;
   border-radius: 0.5rem;
   width: 13rem;
-  background-color: rgb(255, 81, 0);
+  background-color: #ff5100;
 }
 
 .button-confirmar a {
@@ -257,6 +275,25 @@ main{
     justify-content: center;
   }
   .codigo{
+    margin-top: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .contenedor {
+    margin: 3rem;
+  }
+
+  .contenedor--datos-1, .contenedor--datos-2 {
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .input i {
+    position: static;
+  }
+
+  .codigo {
     margin-top: 0.5rem;
   }
 }
