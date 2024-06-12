@@ -103,7 +103,7 @@ input {
 
 @media screen and (width < 860px) {
   .items {
-    transform: translate(-70%);
+    
   }
 }
 

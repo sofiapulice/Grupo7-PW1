@@ -86,28 +86,31 @@ input {
 }
 
 .grilla {
-    width: fit-content;
-    gap: 0.5rem;
-    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 5rem;
+    width:fit-content;
 }
 
 .grilla--titulo {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding-bottom: 1rem;
+    align-items: center;
+    border-bottom:  1px solid #ffffff64;
 }
 
 .grilla--peliculas {
     display: flex;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
 }
 
 .pelicula {
     display: flex;
     flex-direction: column;
     text-align: center;
-
 }
 
 .grilla a {
@@ -120,7 +123,7 @@ input {
 }
 
 .grilla--peliculas img {
-    height: 15rem;
+    height: 12rem;
     border-radius: 0.3rem;
 }
 
@@ -129,7 +132,6 @@ input {
 }
 
 .footer {
-    height: 15%;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -171,62 +173,47 @@ input {
     padding-left: 1rem;
 }
 
-.pelicula img:hover{
-    transition: 3ms ;
+.pelicula img:hover {
+    transition: 3ms;
     transform: translateY(-5px);
 }
 
-.dropdown{
+.dropdown {
     display: flex;
     flex-direction: column;
 }
 
+@media screen and (max-width:768px) {
 
+    .form input{
+        display: none;
+    }
 
-@media screen and (max-width:1000px) {
+    .grilla{
+        width: 100%;
+    }
 
-
-}
-@media screen and (max-width:1440px) {
-
-    
-    .grilla--peliculas img {
-        height: 9rem;
+    .grilla--peliculas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media screen and (width < 600px) {
-    /* .grilla--peliculas {
- 
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        box-sizing: border-box;
-    } */
-    .main {
-        height: auto;
-        margin-top: 2em;
+@media screen and (max-width:450px) {
+    .grilla{
+        width: 80%;
+
+    }
+    .grilla--titulo{
+        margin: 0 1rem;
     }
     .grilla--peliculas {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        width: 100%;
     }
-    .grilla--peliculas img {
-        height: auto;
-        max-width: 100%;  
-    }
-
-    .grilla--peliculas img {
-        height: 20rem; 
-        margin-bottom: 20px; 
-    }
-    .grilla--peliculas .pelicula{
-        margin-top: 20px;
-    }
-    .main {
-        /* margin-top:  93.75rem;  */
-        background-image: none;
+    .pelicula img {
+        height: 10rem;
     }
 }
