@@ -3,75 +3,89 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
 }
 
-html,
 body {
     height: 100vh;
     background-color: black;
 }
 
-.header {
+header {
+    width: 100%;
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-between;
-    padding: 3px 10px;
+    padding: 0.5rem 0;
+    flex-wrap: wrap;
+
 }
 
-.logo,
-.foto-perfil {
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 3rem;
+    margin: 0 5rem;
+    flex-wrap: wrap;
+}
+
+.nav-bar ul a {
+
+    color: white;
+    padding: 0.5rem;
+    border-radius: 15px;
+}
+
+.nav-bar ul a:hover {
+    border: 1px solid white;
+}
+
+.logo img,
+.perfil img {
     height: 3rem;
 }
 
-.left {
-    gap: 5rem;
-}
-
-.left a {
-    text-decoration: none;
-}
-
-.nav a:hover {
-    text-decoration: underline;
-}
-
-.nav ul li {
-    list-style: none;
-}
-
-.nav ul {
+.nav-right {
     display: flex;
-    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
 
-.form input {
-    background-color: #000000;
-    border: none;
-    border-bottom: 1px solid white;
-    outline: none;
-}
-
-.right {
-    gap: 1rem;
-}
-
-.foto-perfil {
+.nav-right .perfil img {
     border-radius: 50%;
 }
 
-.left a,
-.form i,
-input {
-    color: #ffffff;
-}
-
-.header a {
-    font-size: 0.9rem;
-}
-
-.form ::placeholder {
+.input {
     position: relative;
-    bottom: 2px;
+}
+
+.input input {
+    height: 1.5rem;
+    background-color: rgb(0, 0, 0);
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.input input::placeholder {
+    color: white;
+}
+
+.search i {
+    color: white;
+}
+
+.search {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 3px;
 }
 
 .main {
@@ -90,14 +104,13 @@ input {
     flex-direction: column;
     gap: 1rem;
     margin: 2rem 5rem;
-    width:fit-content;
+    width: fit-content;
 }
 
 .grilla--titulo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom:  1px solid #ffffff64;
 }
 
 .grilla--peliculas {
@@ -131,65 +144,59 @@ input {
     color: white;
 }
 
-.footer {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
-    justify-content: center;
-}
-
-.footer a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
-
-.footer i {
-    color: white;
-}
-
-.footer--derechos-reservados {
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
-}
-
-.footer--derechos-reservados h2 {
-    font-size: 1rem;
-    color: #ffffff;
-}
-
-.footer--icons,
-.footer--condiciones {
-    padding-bottom: 0.5rem;
-}
-
-.footer--icons i,
-.footer--condiciones a {
-    padding-left: 1rem;
-}
-
 .pelicula img:hover {
     transition: 3ms;
     transform: translateY(-5px);
 }
 
-.dropdown {
-    display: flex;
-    flex-direction: column;
+
+@media (max-width:800px) {
+    header {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 2rem;
+    }
+
+    .nav-bar ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+        padding: 0.3rem 0;
+    }
+
+    .nav-bar ul a:hover {
+        text-decoration: underline;
+        border: none;
+    }
+
 }
 
-@media screen and (max-width:768px) {
+@media (max-width:600px) {
+    header {
+        padding: 1rem;
+    }
 
-    .form input{
+    .input input {
         display: none;
     }
 
-    .grilla{
+    .search {
+        position: static;
+    }
+
+    .nav-right {
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width:785px) {
+
+    .form input {
+        display: none;
+    }
+
+    .grilla {
         width: 100%;
     }
 
@@ -199,21 +206,24 @@ input {
     }
 }
 
-@media screen and (max-width:450px) {
-    .grilla{
-        width: 80%;
+@media screen and (max-width:450px) {}
 
-    }
-    .grilla--titulo{
-        margin: 0 1rem;
-    }
-    .grilla--peliculas {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        width: 100%;
-    }
-    .pelicula img {
-        height: 10rem;
-    }
+.grilla {
+    width: 90%;
+
+}
+
+.grilla--titulo {
+    margin: 0 1rem;
+}
+
+.grilla--peliculas {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+}
+
+.pelicula img {
+    height: 10rem;
 }

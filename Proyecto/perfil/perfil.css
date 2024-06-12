@@ -83,11 +83,9 @@ main{
 }
 
 .contenedor {
-  height: fit-content;
-  margin: 1rem 5rem;
   border: 1px solid #d6d3d33a;
-  border-radius: 20px;
   position: relative;
+
 }
 
 .contenedor--main {
@@ -252,9 +250,6 @@ input[type="checkbox"] {
     display: flex;
     flex-direction: column;
   }
-  .contenedor{
-    height: fit-content;
-  }
   .list--item,.input input{
     display: none;
   }
@@ -280,9 +275,6 @@ input[type="checkbox"] {
 }
 
 @media screen and (max-width: 570px) {
-  .contenedor {
-    margin: 3rem;
-  }
 
   .contenedor--datos-1, .contenedor--datos-2 {
     margin: 0.5rem;
