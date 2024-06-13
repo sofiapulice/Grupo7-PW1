@@ -35,34 +35,34 @@
 
 
 
-                <form action="../Registrar_Usuario/registrarPaso2.html" class="campos">
+                <form action="./registrarPaso2.html" class="campos" onsubmit="return validar(event)">
 
                     <div class="inputs">
+                        <label for="nombre"></label>
+                        <input type="text" class="input" name="nombre" id="nombre"  placeholder="Nombre" />
 
-                        <input type="text" class="input" name="nombre" id="nombre" required placeholder="Nombre" />
+                        <label for="apellido"></label>
+                        <input type="text" class="input" name="apellido" id="apellido"  placeholder="Apellido">
 
-                        <input type="text" class="input" name="apellido" id="apellido" required placeholder="Apellido">
+                        <label for="email"></label>
+                        <input type="email" class="input" name="email" id="email"  placeholder="Alguien@ejemplo.com">
 
-                        <input type="email" class="input" name="email" id="email" required
-                            placeholder="Alguien@ejemplo.com">
+                        <label for="password"></label>
+                        <input type="password" name="password" id="password" class="input"  placeholder="***********">
 
-                        <input type="password" name="password" id="password" class="input" required
-                            placeholder="***********">
-
-                        <input type="password" class="input" name="repetirpassword" id="repetirpassword" required
-                            placeholder="***********">
+                        <label for="repetirpassword"></label>
+                        <input type="password" class="input" name="repetirpassword" id="repetirpassword"  placeholder="***********">
                     </div>
-
-
+                    <div id="mensaje"></div>
                     <div class="buttonDiv">
                         <button type="submit" class="boton">Siguiente</button>
-
                     </div>
 
                 </form>
             </section>
         </article>
     </main>
+    <script src="./registrar.js"></script>
 </body>
 
 </html>
