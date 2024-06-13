@@ -131,10 +131,10 @@ main{
 input {
   color: #000000; 
 }
-input::placeholder {
-  color: #4646463a; 
-}
 
+.tarjeta-composiciones input::placeholder{
+  color: #c1b9b9;
+}
 
 .contenedor--datos-2 {
   border: 1px solid #d6d3d33a;
@@ -236,7 +236,7 @@ input[type="checkbox"] {
   height: 2.5rem;
   border-radius: 0.5rem;
   width: 13rem;
-  background-color: #ff5100;
+  background-color: #ee660c;
 }
 
 .button-confirmar a {
