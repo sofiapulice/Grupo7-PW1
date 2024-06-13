@@ -83,11 +83,9 @@ main{
 }
 
 .contenedor {
-  height: fit-content;
-  margin: 1rem 5rem;
   border: 1px solid #d6d3d33a;
-  border-radius: 20px;
   position: relative;
+
 }
 
 .contenedor--main {
@@ -133,10 +131,10 @@ main{
 input {
   color: #000000; 
 }
-input::placeholder {
-  color: #4646463a; 
-}
 
+.tarjeta-composiciones input::placeholder{
+  color: #c1b9b9;
+}
 
 .contenedor--datos-2 {
   border: 1px solid #d6d3d33a;
@@ -238,7 +236,7 @@ input[type="checkbox"] {
   height: 2.5rem;
   border-radius: 0.5rem;
   width: 13rem;
-  background-color: #ff5100;
+  background-color: #ee660c;
 }
 
 .button-confirmar a {
@@ -251,9 +249,6 @@ input[type="checkbox"] {
   .contenedor--datos{
     display: flex;
     flex-direction: column;
-  }
-  .contenedor{
-    height: fit-content;
   }
   .list--item,.input input{
     display: none;
@@ -280,9 +275,6 @@ input[type="checkbox"] {
 }
 
 @media screen and (max-width: 570px) {
-  .contenedor {
-    margin: 3rem;
-  }
 
   .contenedor--datos-1, .contenedor--datos-2 {
     margin: 0.5rem;

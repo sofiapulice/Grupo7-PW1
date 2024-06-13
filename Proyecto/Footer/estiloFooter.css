@@ -1,81 +1,80 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     /* overflow: hidden; */
 }
 
-footer a{
+footer a {
     text-decoration: none;
     color: #ffffff;
 }
-footer{
+
+footer {
     background-color: #000000;
-    font-family: 'roboto',sans-serif;
+    font-family: 'roboto', sans-serif;
     font-weight: bold;
     color: #ffffff;
-    font-size: 11px;
+    font-size: 0.8rem;
 }
 
-.footer-contenedor{
+.footer-contenedor {
     width: 100%;
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-top: 1px solid #ffffff11;
+    padding: 0.5rem 0;
+
 }
 
-.redes-icons{
+.redes-icons {
     display: flex;
     justify-content: center;
+    gap: 1rem;
 }
 
-.redes-icons i{
+.redes-icons i {
     color: #ffffff;
-    font-size: 30px;
-    padding: 15px;
-    margin: 5px;
+    font-size: 1.5rem;
 }
 
-.redes-icons i:hover{
+.redes-icons i:hover {
     cursor: pointer;
 }
 
-.condiciones{
-    margin: 15px 0;
-}
 
-.condiciones ul{
+.condiciones ul {
     display: flex;
     justify-content: center;
     list-style: none;
+    gap: 1rem;
 }
 
-.condiciones ul li p{
-    margin: 10px;
-    text-decoration: none;
-
-}
-
-.condiciones p:hover{
+.condiciones p:hover {
     cursor: pointer;
 }
 
-.copy{
+.copy {
     padding: 10px;
     text-align: center;
 }
 
-.copy p{
+.copy p {
     font-size: 10px;
 }
 
 @media screen and (width < 376px) {
-  footer{  
-    font-size: 8px;
-  }
-  .copy p{
-    font-size: 7px;
-  }
-  .redes-icons i{
-    font-size: 20px;
-    padding: 10px;
-  }
+    footer {
+        font-size: 8px;
+    }
+
+    .copy p {
+        font-size: 7px;
+    }
+
+    .redes-icons i {
+        font-size: 20px;
+        padding: 10px;
+    }
 }

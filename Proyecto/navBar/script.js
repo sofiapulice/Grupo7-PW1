@@ -1,0 +1,1 @@
+bars = document.querySelector(".bars")
