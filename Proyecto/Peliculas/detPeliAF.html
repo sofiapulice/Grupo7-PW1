@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Serif:ital,opsz,wdth@0,8..144,50..150;1,8..144,50..150&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
     <title>Animales Fantasticos y donde encontrarlos</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
 </head>
 <body>
@@ -91,16 +92,17 @@
         <section class="detPeli__iframe">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/liHMfhux9M4?si=VKv56vUxxXUAJl81" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
-        <section>
+    
+        <section class="carousel-container">
             <h5>Quizás también te guste</h5>
-            <div class="otrasPelis">
-                <a href="detPeli.html"><img src="../img/HP3.jpg" alt="HP3"></a>
-                <a href="detPeliBAT2.html"><img src="../img/Batman2.jpg" alt="Batman Caballero de la Noche"></a>
-                <a href="detPeliHP4.html"><img src="../img/harry-potter-y-el-caliz-de-fuego.png_242310155.webp" alt="Hp y el caliz de fuego"></a>
-                <a href="detPeliSA3.html"><img src="../img/SeñorAnillo3.jpg" alt="El señor de los anillos"></a>
+            <div class="otrasPelis-carousel" data-flickity='{ "wrapAround": true }'>
+                <div class="carousel-cell"><a href="detPeli.html"><img src="../img/HP3.jpg" alt="Harry Potter"></a></div>
+                <div class="carousel-cell"><a href="detPeliBAT2.html"><img src="../img/Batman2.jpg" alt="Batman Caballero de la Noche"></a></div>
+                <div class="carousel-cell"><a href="detPeliHP4.html"><img src="../img/harry-potter-y-el-caliz-de-fuego.png_242310155.webp" alt="Hp y el caliz de fuego"></a></div>
+                <div class="carousel-cell"><a href="detPeliSA3.html"><img src="../img/SeñorAnillo3.jpg" alt="El señor de los anillos"></a></div>
             </div>
         </section>
-        
+
     </main>
     <footer>
         <div class="footer-contenedor">
@@ -117,10 +119,12 @@
                     <li><p>Contacto</p></li>
                 </ul>
             </div>
-            <!-- <div class="copy">
+            <div class="copy">
                 <p>Copyright <i class='bx bx-copyright'></i> 2024 UNLIX programación web</p>
-            </div> -->
+            </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 </html>
+
