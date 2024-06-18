@@ -1,9 +1,12 @@
 let regexCampoEmail=/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
 let regexCampoPassword=/^(?=.*[a-zA-Z].*[a-zA-Z])(?=.*\d.*\d)(?=.*[!@#$%^&*(),.?":{}|<>[\]\\/+=_-].*[!@#$%^&*(),.?":{}|<>[\]\\/+=_-])[a-zA-Z0-9!@#$%^&*(),.?":{}|<>[\]\\/+=_-]{8,}$/;
 let regexCampoNA=/^[A-Za-z]+$/;
+ 
+
 function validar (event){
+    
     let error=false;
-    let mensajeError=""; 
+    let mensajeError="";
     document.getElementById("mensaje").style.color="red";
 
         //Valida campo nombre   
@@ -38,3 +41,4 @@ function validar (event){
 }
 
 document.querySelector(".campos").addEventListener("submit", validar);
+
