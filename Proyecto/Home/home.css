@@ -154,6 +154,10 @@ header {
   transform: translateY(-5px);
 }
 
+#ver-mas{
+  text-decoration: none;
+}
+
 .carousel-container {
   width: 100%; 
   margin: 5rem auto; 
