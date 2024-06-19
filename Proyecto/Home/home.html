@@ -18,20 +18,32 @@
 <body>
     <header>
         <div class="logo">
-            <a href="../Home/home.html"><img src="../Images/Brand.png" alt="Logo" />
-            </a>
+            <div class="header logo-titulo">
+                <a href="../Home/home.html"><img src="../Images/Brand.png" alt="logo" class="logo"></a>
+                <a class="unlix" href="../Home/home.html">UNFLIX</a>
+            </div>
         </div>
         <nav class="nav-bar">
             <ul>
                 <li><a href="../Peliculas/detPeli.html">Peliculas</a></li>
                 <li><a href="../Series/detSerie.html">Series</a></li>
-                <li><a href="../Peliculas/detPeli.html">Generos</a></li>
+                 <li class="generos">
+                    <a href="#" id="showGenres">Géneros</a>
+                    <ul class="generos-dropdown hide" id="generosDropdown">
+                        <li class="filtro-generos"><a href="#">Acción</a></li>
+                        <li class="filtro-generos"><a href="#">Aventura</a></li>
+                        <li class="filtro-generos"><a href="#">Comedia</a></li>
+                        <li class="filtro-generos"><a href="#">Drama</a></li>
+                        <li class="filtro-generos"><a href="#">Fantasía</a></li>
+                        <li class="filtro-generos"><a href="#">Terror</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <div class="nav-right">
             
             <div class="input">
-                <input type="text" name="input-pelicula" id="input-pelicula" placeholder="">
+                <input type="text" name="input-pelicula" id="input-pelicula" placeholder="Buscar">
                 <div class="search">
                     <i class="bi bi-search"></i>
                 </div>
@@ -81,16 +93,15 @@
                 </div>
             </div>
         </div>
-
             
             <div class="carousel-container mt-5" id="carouselPeliculas">
                 <a id="ver-mas"><h2>Películas</h2></a>
                 <div class="carousel" data-flickity='{ "wrapAround": true }'>
-                    <div class="carousel-cell"><a href="../Peliculas/detPeliHP4.html"><img class="carousel-cell__img" src="../img/harry-potter-y-el-caliz-de-fuego.png_242310155.webp" alt=""></a></div>
-                    <div class="carousel-cell"><a href="../Peliculas/detPeliBAT2.html"><img class="carousel-cell__img" src="../img/Batman2.jpg" alt=""></a></div>
-                    <div class="carousel-cell"><a href="../Peliculas/detPeliAF.html"><img class="carousel-cell__img" src="../img/AnimalesFantasticos.jpg" alt=""></a></div>
-                    <div class="carousel-cell"><a href="../Peliculas/detPeli.html"><img class="carousel-cell__img" src="../img/HP3.jpg" alt=""></a></div>
-                    <div class="carousel-cell"><a href="../Peliculas/detPeliSA3.html"><img class="carousel-cell__img" src="./img/SANI.jpg" alt=""></a></div>
+                    <div class="carousel-cell" data-genres ="Aventura Fantasía"><a href="../Peliculas/detPeliHP4.html"><img class="carousel-cell__img" src="../img/harry-potter-y-el-caliz-de-fuego.png_242310155.webp" alt="">Harry Potter y el caliz de fuego</a></div>
+                    <div class="carousel-cell" data-genres ="Drama Acción Crimen Thriller"><a href="../Peliculas/detPeliBAT2.html"><img class="carousel-cell__img" src="../img/Batman2.jpg" alt="">Batman 2</a></div>
+                    <div class="carousel-cell" data-genres ="Aventura Fantasía"><a href="../Peliculas/detPeliAF.html"><img class="carousel-cell__img" src="../img/AnimalesFantasticos.jpg" alt="">Animales Fantasticos</a></div>
+                    <div class="carousel-cell" data-genres ="Aventura Fantasía"><a href="../Peliculas/detPeli.html"><img class="carousel-cell__img" src="../img/HP3.jpg" alt="">Harry Potter 3 </a></div>
+                    <div class="carousel-cell" data-genres ="Aventura Fantasía"><a href="../Peliculas/detPeliSA3.html"><img class="carousel-cell__img" src="./img/SANI.jpg" alt="">El señor de los anillos The lord of the rings</a></div>
                 </div>
             </div>
 
@@ -98,11 +109,11 @@
             <div class="carousel-container mt-5" id="carouselSeries">
                 <h2>Series</h2>
                 <div class="carousel" data-flickity='{ "wrapAround": true }'>
-                    <div class="carousel-cell"><a href="../Series/detSerieTheOff.html"><img class="carousel-cell__img" src="../img/TheOffice.jpg" alt=""></a></div>
-                    <div class="carousel-cell"><a href="../Series/detSerieBrbd.html"><img class="carousel-cell__img" src="./img/Sin título-1.jpg" alt=""></a></div>
-                    <div class="carousel-cell"><a href="../Series/detSerieChern.html"><img class="carousel-cell__img" src="./img/Sin título-2.jpg" alt=""></a></div>
-                    <div class="carousel-cell"><a href="../Series/detSerie.html"><img class="carousel-cell__img" src="./img/Sin título-3.jpg" alt=""></a></div>
-                    <div class="carousel-cell"><a href="../Series/detSerieHod.html"><img class="carousel-cell__img" src="../img/HoD.jpg" alt=""></a></div>
+                    <div class="carousel-cell" data-genres ="Comedia"><a href="../Series/detSerieTheOff.html"><img class="carousel-cell__img" src="../img/TheOffice.jpg" alt="">The office</a></div>
+                    <div class="carousel-cell" data-genres ="Drama Suspenso Tragedia Humor negro"><a href="../Series/detSerieBrbd.html"><img class="carousel-cell__img" src="./img/Sin título-1.jpg" alt="">Breaking Bad</a></div>
+                    <div class="carousel-cell" data-genres ="Drama"><a href="../Series/detSerieChern.html"><img class="carousel-cell__img" src="./img/Sin título-2.jpg" alt="">Chernobyl</a></div>
+                    <div class="carousel-cell" data-genres ="Fantasía Drama Acción Aventura Terror Humor negro"><a href="../Series/detSerie.html"><img class="carousel-cell__img" src="./img/Sin título-3.jpg" alt="">The game of thrones juego de tronos</a></div>
+                    <div class="carousel-cell" data-genres ="Fantasía Drama Acción Aventura Terror Humor negro"><a href="../Series/detSerieHod.html"><img class="carousel-cell__img" src="../img/HoD.jpg" alt="">la casa de los dragones the house of the dragons</a></div>
                 </div>
             </div>
         </div>
