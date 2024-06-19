@@ -28,6 +28,7 @@ header {
   align-items: center;
 }
 
+
 .nav-bar ul {
   display: flex;
   gap: 3rem;
@@ -35,14 +36,24 @@ header {
   flex-wrap: wrap;
 }
 
+.nav-bar a{
+  transition: color 0.3s ease;
+}
+
 .nav-bar ul a {
   color: #ffffff;
   padding: 0.2rem;
   border-radius: 15px;
+  font-weight: bold;
+  display: inline-block;
 }
 
 .nav-bar ul a:hover {
-  border: 1px solid #ffffff;
+  color: #EC591F;
+}
+
+.nav-bar ul li a {
+  font-size: 0.9rem;
 }
 
 .logo img,
@@ -74,7 +85,7 @@ header {
 }
 
 .input input::placeholder {
-  color: #ffffff;
+  color: #636363;
 }
 
 .search i {
@@ -154,10 +165,6 @@ header {
   transform: translateY(-5px);
 }
 
-#ver-mas{
-  text-decoration: none;
-}
-
 .carousel-container {
   width: 100%; 
   margin: 5rem auto; 
@@ -214,6 +221,46 @@ header {
     background: #9456E5; 
   }
 
+#ver-mas{
+  text-decoration: none;
+}
+
+
+.generos {
+  position: relative;
+  display: inline-block;
+}
+
+.generos-dropdown {
+  position: absolute;
+  left: -100%;
+  background-color: #00000071;
+  border: 1px solid #030303cc;
+  padding: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  min-width: 130px;
+  font-size: 13px;
+}
+
+.generos-dropdown a:hover {
+  background-color: #181717;
+}
+
+.generos-dropdown.show {
+  display: block;
+}
+
+.filtro{
+  display: none; /*PARA EL JS BUSQUEDA*/
+}
+
+ul .hide{
+  display: none;
+}
+
+
+
 @media screen and (max-width: 1100px) {
     .carousel-cell {
         width: 170px;
@@ -257,6 +304,14 @@ header {
 
   .carousel-container h2{
     margin-left: 20px;
+  }
+
+  ul .hide{
+    display: none;
+  }
+
+  .generos-dropdown {
+    font-size: 10px;
   }
 }
 
