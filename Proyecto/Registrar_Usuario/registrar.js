@@ -27,7 +27,7 @@ function validar (event){
         //Valida la contraseña
         if(!regexCampoPassword.test(document.getElementById("password").value)){
             error=true;
-            mensajeError+="<p>La contraseña no es válida</p>"; 
+            mensajeError+="<p>La contraseña no es válida, debe contener 3 letras,3 números y 3 caracteres especiales</p>"; 
         }
         if (document.getElementById("password").value !== document.getElementById("repetirpassword").value) {
             error = true;
