@@ -42,8 +42,7 @@
                 <form action="../Home/home.html" class="form" onsubmit="return validar2(event)">
                     <label for="metododepagos" class="labelmetododepago">Metodo de pago</label>
                     <div class="input-tarjeta">
-                        <input type="radio" name="metododepago" id="metododepagos" required
-                            placeholder="Numero de tarjeta">
+                        <input type="radio" name="metodosdepago" id="metododepagos" value="tarjetadecredito">
                         <label for="tarjetadecredito" class="label">Tarjeta de credito</label>
                         <div class="composicion-tarjeta">
                             <div class="tarjeta-icono">
@@ -53,12 +52,10 @@
                                         d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z" />
                                     <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
                                 </svg>
-                                <!-- <label for="tarjetadecredito"></label> -->
-                                <input class="input-num-tarjeta" type="number" name="tarjetadecredito"
-                                    id="tarjetadecredito" placeholder="Numero de tarjeta">
+                    
+                                <input class="input-num-tarjeta" type="number" name="tarjetadecredito" id="tarjetadecredito" placeholder="Numero de tarjeta">
                                 <label for="clavedecredito"></label>    
-                                <input class="input-num-tarjeta" type="number" name="clavedecredito"
-                                    id="clavedecredito" placeholder="XXX">
+                                <input class="input-num-tarjeta" type="number" name="clavedecredito" id="clavedecredito" placeholder="XXX">
 
                             </div>
                         </div>
@@ -68,17 +65,17 @@
                     <div id="mensaje2"></div>
 
                     <div class="input cupon">
-                        <input type="radio" name="cupondepago" id="cupondepago">
+                        <input type="radio" name="metodosdepago" id="cupondepago" value="cupondepago">
                         <label for="cupondepago" class="label">Cupon de pago</label>
 
                         <div class="composicion-cupon">
                             <div class="composicion-pagofacil">
-                                <input type="checkbox" name="pagofacil" id="pagofacil">
+                                <input type="checkbox" name="metodosdepago" id="pagofacil">
                                 <label for="pagofacil" class="label">Pago facil</label>
                             </div>
 
                             <div class="composicion-rapi">
-                                <input type="checkbox" name="rapipago" id="rapipago" >
+                                <input type="checkbox" name="metodosdepago" id="rapipago">
                                 <label for="rapipago" class="label">RapiPago</label>
                             </div>
 
@@ -88,7 +85,7 @@
                     </div>
 
                     <div class="input-transferencia">
-                        <input  type="radio" name="transferencia" id="transferencia">
+                        <input  type="radio" name="metodosdepago" id="transferencia" value="transferencia">
                         <label for="transferencia" class="label">Transferencia <br></label>
                         <label for="trasnsferencia" class="labeltransferencia">CBU:2970043311100057980956</label>
                     </div>
