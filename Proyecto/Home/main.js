@@ -1,107 +1,153 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const generosDropdown = document.getElementById('generosDropdown');
-    const showGenresButton = document.getElementById('showGenres');
-    const generoLinks = document.querySelectorAll('.filtro-generos a');
-    const peliculas = document.querySelectorAll('#carouselPeliculas .carousel-cell');
-    const series = document.querySelectorAll('#carouselSeries .carousel-cell');
-    const popularesContenedor = document.querySelector('.populares-contenedor');
-    const carouselPeliculas = document.getElementById('carouselPeliculas');
-    const carouselSeries = document.getElementById('carouselSeries');
-    const linkPeliculas = document.querySelector('.nav-bar ul li:nth-child(1) a');
-    const linkSeries = document.querySelector('.nav-bar ul li:nth-child(2) a');
-    const linkInicio = document.querySelector('.logo a');
-    const inputPelicula = document.getElementById('input-pelicula');
-
-    function mostrarSoloCarouselPeliculas() {
-        carouselPeliculas.style.display = 'block';
-        carouselSeries.style.display = 'none';
-        ocultarPopulares();
+document.addEventListener("DOMContentLoaded", function () {
+    const inputBusqueda = document.getElementById("busqueda-pelicula");
+    const popularesContenedor = document.getElementById("popularesContenedor");
+    const carouselPeliculas = document.getElementById("carouselPeliculas");
+    const carouselSeries = document.getElementById("carouselSeries");
+    const linkPeliculas = document.querySelector('.color[href="../Home/home.html"]');
+    const linkSeries = document.querySelectorAll('.color[href="../Home/home.html"]')[1];
+    const mensajeNoResultados = document.getElementById("mensajeNoResultados");
+    const h2Peliculas = document.getElementById("h2Peliculas");
+    const h2Series = document.getElementById("h2Series");
+    const generosSelect = document.getElementById("Generos");
+  
+    mostrarTodos();
+  
+    function mostrarSoloPeliculas() {
+      popularesContenedor.style.display = "none";
+      carouselPeliculas.style.display = "block";
+      carouselSeries.style.display = "none";
     }
-
-    function mostrarSoloCarouselSeries() {
-        carouselPeliculas.style.display = 'none';
-        carouselSeries.style.display = 'block';
-        ocultarPopulares();
+  
+    function mostrarSoloSeries() {
+      popularesContenedor.style.display = "none";
+      carouselPeliculas.style.display = "none";
+      carouselSeries.style.display = "block";
     }
-
-    function mostrarAmbosCarousels() {
-        carouselPeliculas.style.display = 'block';
-        carouselSeries.style.display = 'block';
-        mostrarPopulares();
-    }
-
-    function ocultarPopulares() {
-        popularesContenedor.style.display = 'none';
-    }
-
-    function mostrarPopulares() {
-        popularesContenedor.style.display = 'block';
-    }
-
-    mostrarAmbosCarousels();
-
-    linkPeliculas.addEventListener('click', function(e) {
-        e.preventDefault();
-        mostrarSoloCarouselPeliculas();
+  
+    linkPeliculas.addEventListener("click", function (event) {
+      event.preventDefault();
+      mostrarSoloPeliculas();
     });
-
-    linkSeries.addEventListener('click', function(e) {
-        e.preventDefault();
-        mostrarSoloCarouselSeries();
+  
+    linkSeries.addEventListener("click", function (event) {
+      event.preventDefault();
+      mostrarSoloSeries();
     });
-
-    linkInicio.addEventListener('click', function(e) {
-        e.preventDefault();
-        mostrarAmbosCarousels();
+  
+    const linkInicio = document.querySelector(".home");
+    linkInicio.addEventListener("click", function (event) {
+      event.preventDefault();
+      mostrarTodos();
     });
-
-    // Busqueda
-    inputPelicula.addEventListener("keyup", function(e) {
-        const query = e.target.value.toLowerCase();
-        if (query) {
-            ocultarPopulares();
+  
+    inputBusqueda.addEventListener("input", function () {
+      const valorBusqueda = inputBusqueda.value.trim().toLowerCase();
+  
+      if (valorBusqueda === "") {
+        mostrarTodos();
+        return;
+      }
+  
+    
+      popularesContenedor.style.display = "none";
+  
+      const peliculasFiltradas = Array.from(
+        carouselPeliculas.querySelectorAll(".carousel-cell")
+      ).filter((pelicula) => {
+        const titulo = pelicula
+          .querySelector("a")
+          .textContent.trim()
+          .toLowerCase();
+        return titulo.includes(valorBusqueda);
+      });
+  
+      mostrarResultados(carouselPeliculas, peliculasFiltradas);
+  
+      const seriesFiltradas = Array.from(
+        carouselSeries.querySelectorAll(".carousel-cell")
+      ).filter((serie) => {
+        const titulo = serie.querySelector("a").textContent.trim().toLowerCase();
+        return titulo.includes(valorBusqueda);
+      });
+  
+      mostrarResultados(carouselSeries, seriesFiltradas);
+  
+      if (peliculasFiltradas.length === 0 && seriesFiltradas.length === 0) {
+        mensajeNoResultados.style.display = "block";
+      } else {
+        mensajeNoResultados.style.display = "none";
+      }
+    });
+  
+    function mostrarTodos() {
+      popularesContenedor.style.display = "block";
+      carouselPeliculas.style.display = "block";
+      carouselSeries.style.display = "block";
+  
+      Array.from(carouselPeliculas.querySelectorAll(".carousel-cell")).forEach(
+        (pelicula) => {
+          pelicula.style.display = "block";
+        }
+      );
+  
+      Array.from(carouselSeries.querySelectorAll(".carousel-cell")).forEach(
+        (serie) => {
+          serie.style.display = "block";
+        }
+      );
+  
+      mensajeNoResultados.style.display = "none";
+    }
+  
+    function mostrarResultados(carousel, elementosFiltrados) {
+      Array.from(carousel.querySelectorAll(".carousel-cell")).forEach(
+        (elemento) => {
+          if (elementosFiltrados.includes(elemento)) {
+            elemento.style.display = "block";
+          } else {
+            elemento.style.display = "none";
+          }
+        }
+      );
+    }
+  
+    generosSelect.addEventListener("change", function () {
+      const generoSeleccionado = generosSelect.value.toLowerCase();
+  
+      popularesContenedor.style.display = "none";
+  
+      mostrarTodos();
+  
+      Array.from(carouselPeliculas.querySelectorAll('.carousel-cell')).forEach(pelicula => {
+        const generos = pelicula.getAttribute('data-genres').toLowerCase().split(' ');
+        if (generos.includes(generoSeleccionado)) {
+          pelicula.style.display = 'block';
         } else {
-            mostrarPopulares();
+          pelicula.style.display = 'none';
         }
-        document.querySelectorAll(".carousel-cell").forEach((opcion) => {
-            opcion.textContent.toLowerCase().includes(query)
-                ? opcion.classList.remove("filtro")
-                : opcion.classList.add("filtro");
-        });
-    });
-
-    showGenresButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        generosDropdown.classList.toggle('hide');
-    });
-
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.generos') && !e.target.matches('#showGenres')) {
-            generosDropdown.classList.add('hide');
+      });
+  
+      Array.from(carouselSeries.querySelectorAll('.carousel-cell')).forEach(serie => {
+        const generos = serie.getAttribute('data-genres').toLowerCase().split(' ');
+        if (generos.includes(generoSeleccionado)) {
+          serie.style.display = 'block';
+        } else {
+          serie.style.display = 'none';
         }
+      });
+  
+      const peliculasFiltradas = Array.from(carouselPeliculas.querySelectorAll('.carousel-cell')).filter(pelicula => {
+        return pelicula.style.display === 'block';
+      });
+  
+      const seriesFiltradas = Array.from(carouselSeries.querySelectorAll('.carousel-cell')).filter(serie => {
+        return serie.style.display === 'block';
+      });
+  
+      if (peliculasFiltradas.length === 0 && seriesFiltradas.length === 0) {
+        mensajeNoResultados.style.display = 'block';
+      } else {
+        mensajeNoResultados.style.display = 'none';
+      }
     });
-
-    generoLinks.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const selectedGenre = link.textContent.trim().toLowerCase();
-            ocultarPopulares();
-            peliculas.forEach(function(pelicula) {
-                const peliculaGeneros = pelicula.getAttribute('data-genres').toLowerCase();
-                if (peliculaGeneros.includes(selectedGenre)) {
-                    pelicula.style.display = 'block';
-                } else {
-                    pelicula.style.display = 'none';
-                }
-            });
-            series.forEach(function(serie) {
-                const serieGeneros = serie.getAttribute('data-genres').toLowerCase();
-                if (serieGeneros.includes(selectedGenre)) {
-                    serie.style.display = 'block';
-                } else {
-                    serie.style.display = 'none';
-                }
-            });
-        });
-    });
-});
+  });
