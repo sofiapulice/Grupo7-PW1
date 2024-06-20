@@ -2,7 +2,6 @@ function validarFormulario() {
     const usuarioValidar = document.getElementById("usuario").value;
     const contraseñaValidar = document.getElementById("contraseña").value;
     let divIniciarSesion = document.querySelector(".input-box");
-    
 
     // Validar nombre de usuario
     if (usuarioValidar.length < 5) {
@@ -17,8 +16,19 @@ function validarFormulario() {
         return false;
     }
 
-    localStorage.setItem('usuario', usuarioValidar);
-    localStorage.setItem('contraseña', contraseñaValidar);
+// Guardamos en un array para que se puedan registrar varios usuarios 
+
+    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+    let nuevoUsuario = {
+        usuario: usuarioValidar,
+        contraseña: contraseñaValidar
+    };
+
+    usuarios.push(nuevoUsuario);
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+    alert('Usuario registrado exitosamente');
+    return true;
 }
 
 

@@ -100,12 +100,14 @@ main{
   padding: 1rem;
 }
 
-.contenedor--datos {
+.contenedor--datos .contenedor__form {
   width:100% ;
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-top: 1px solid #0000003a;
-
+}
+.contenedor--datos .buttons {
+  
 }
 
 .contenedor--datos-1 {
@@ -220,7 +222,7 @@ input[type="checkbox"] {
   padding-bottom: 1rem;
 }
 
-.buttons a {
+.buttons button {
   text-decoration: none;
   color: white;
   display: flex;
@@ -229,17 +231,20 @@ input[type="checkbox"] {
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-}
-
-.buttons button {
   border: none;
   height: 2.5rem;
   border-radius: 0.5rem;
   width: 13rem;
   background-color: #ee660c;
 }
-
-.button-confirmar a {
+.buttons button:hover {
+  cursor: pointer;
+}
+.buttons a {
+  text-decoration: none;
+  color: white;
+}
+.button-confirmar button {
   border-radius: 0.5rem;
   background-color: #9456e5;
 }
@@ -275,6 +280,11 @@ input[type="checkbox"] {
 }
 
 @media screen and (max-width: 570px) {
+
+  .contenedor--datos .contenedor__form {
+    display: block;
+    box-sizing: border-box;
+  }
 
   .contenedor--datos-1, .contenedor--datos-2 {
     margin: 0.5rem;

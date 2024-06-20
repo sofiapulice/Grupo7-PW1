@@ -52,76 +52,89 @@
             </div>
         </nav>
     </header>
-</body>
-<main>
-    <article class="contenedor">
-        <div class="contenedor--main">
-            <img src="../img/perfil.png" alt="Foto de perfil">
-            <div class="contenedor--datos">
-                <div class="contenedor--datos-1">
-                    <span class="datos--titulo">Datos Personales</span>
-                    <span>E-mail: user123@gmail.com</span>
-                    <span>Contraseña: **********</span>
-                    <div class="nueva--contrasenia">
-                        <label for="password">Nueva contraseña:
-                            <input type="password" name="password" id="password">
-                        </label>
-                        <label for="repetir-password">Repetir contraseña:
-                            <input type="password" name="repetir-password" id="repetir-password">
-                        </label>
+    <main>
+        <article class="contenedor">
+            <div class="contenedor--main">
+                <img src="../img/perfil.png" alt="Foto de perfil">
+                <div class="contenedor--datos">
+
+                <form action="../Home/home.html" class="contenedor__form" onsubmit="return validarPerfil(event)">
+                    <div class="contenedor--datos-1">
+                        <span class="datos--titulo">Datos Personales</span>
+                        <span>E-mail: user123@gmail.com</span>
+                        <span>Contraseña: **********</span>
+                        <div class="nueva--contrasenia">
+                            <label for="password">Nueva contraseña:
+                                <input type="password" name="password" id="password">
+                            </label>
+                            <label for="repetir-password">Repetir contraseña:
+                                <input type="password" name="repetir-password" id="repetir-password">
+                            </label>
+                        </div>
                     </div>
-                </div>
-                <div class="contenedor--datos-2">
-
-                    <div class="metodo--pago">
-                        <label for="metodo--pago" class="metodo--pago--label">Métodos de pago</label>
-                        <div class="tarjeta">
-                            <div class="tarjeta-head">
-                                <input type="radio" name="metodo--pago">
-                                <label for="tarjeta">Tarjeta de crédito</label>
-                            </div>
-                            <div class="tarjeta-composiciones">
-                                <input type="number" class="numero" name="tarjeta" placeholder="1234 5678 9101 1112">
-                                <input type="number" class="codigo" name="tarjeta" placeholder="XXX">
-                            </div>
-                        </div>
-                        <div class="cupon">
-                            <div class="cupon-head">
-                                <input type="radio" name="metodo--pago">
-                                <label for="cupon">Cupón de pago</label>
-                            </div>
-                            <div class="cupon--tipos">
-                                <div>
-                                    <input type="checkbox" name="cupon">
-                                    <label for="cupon">Pago fácil</label>
+                    <div class="contenedor--datos-2">
+    
+                        <div class="metodo--pago">
+                            <label for="metodo--pago" class="metodo--pago--label">Métodos de pago</label>
+                            <div class="tarjeta">
+                                <div class="tarjeta-head">
+                                    <input type="radio" name="metodo--pago" value="tarjetaPerfil">
+                                    <label for="tarjeta">Tarjeta de crédito</label>
                                 </div>
-                                <div>
-                                    <input type="checkbox" name="cupon">
-                                    <label for="cupon">RapiPago</label>
+                                <div class="tarjeta-composiciones">
+                                    <label for="tarjetaPerfil"></label>
+                                    <input type="number" class="numero" name="tarjeta" id="tarjetaPerfil" placeholder="1234 5678 9101 1112">
+                                    <label for="clavePerfil"></label>
+                                    <input type="number" class="codigo" name="tarjeta" id="clavePerfil" placeholder="XXX">
                                 </div>
-
                             </div>
+                            <div class="cupon">
+                                <div class="cupon-head">
+                                    <input type="radio" name="metodo--pago" id="cuponPerfil" value="cuponPerfil">
+                                    <label for="cuponPerfil">Cupón de pago</label>
+                                </div>
+                                <div class="cupon--tipos">
+                                    <div>
+                                        <input type="checkbox" name="metodo--pago" id="pagoFacilPerfil">
+                                        <label for="cupon">Pago fácil</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="metodo--pago" id="RapiPagoPerfil">
+                                        <label for="cupon">RapiPago</label>
+                                    </div>
+    
+                                </div>
+                            </div>
+                            <div class="transferencia">
+                                <div class="transferencia-head">
+                                    <input type="radio" name="metodo--pago">
+                                    <label for="transferencia">Transferencia</label>
+                                </div>
+    
+                                <div class="cbu">
+                                    <span>CBU:72403969111000231</span>
+                                </div>
+                            </div>
+    
                         </div>
-                        <div class="transferencia">
-                            <div class="transferencia-head">
-                                <input type="radio" name="metodo--pago">
-                                <label for="transferencia">Transferencia</label>
-                            </div>
-
-                            <div class="cbu">
-                                <span>CBU:72403969111000231</span>
-                            </div>
-                        </div>
-
                     </div>
+                    <div id="mensajePerfil"></div>
+                    <div class="buttons">
+                        <button type="submit" class="button-confirmar">Guardar Cambios</button>
+                        <button class="button-cancelar"><a href="../Home/home.html">Cancelar subscripción</a></button>
+                    </div>
+                </form>
+
                 </div>
             </div>
-        </div>
-        <div class="buttons">
-            <button class="button-confirmar"><a href="../Home/home.html">Guardar Cambios</a></button>
-            <button class="button-cancelar"><a href="/index.html">Cancelar subscripción</a></button>
-        </div>
-    </article>
-</main>
+            <!-- <div class="buttons">
+                <button class="button-confirmar"><a href="../Home/home.html">Guardar Cambios</a></button>
+                <button class="button-cancelar"><a href="/index.html">Cancelar subscripción</a></button>
+            </div> -->
+        </article>
+    </main>
+    <script src="./perfil.js"></script>
+</body>
+
 
 </html>
