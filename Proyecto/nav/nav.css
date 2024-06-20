@@ -38,12 +38,7 @@ body {
   text-decoration: none;
 }
 
-.form input {
-  background-color: #000000;
-  border: none;
-  border-bottom: 1px solid white;
-  outline: none;
-}
+
 
 .items {
   position: absolute;
@@ -86,9 +81,7 @@ body {
   border-radius: 50%;
 }
 
-.left a,
-.form i,
-input {
+.left a{
   color: #ffffff;
 }
 
@@ -96,9 +89,14 @@ input {
   font-size: 0.9rem;
 }
 
-.form ::placeholder {
-  position: relative;
-  bottom: 2px;
+.cerrarSesion a{
+color: #9456e5;
+font-weight: bold;
+text-decoration: none;
+}
+
+.cerrarSesion a:hover{
+text-decoration:underline;
 }
 
 @media screen and (width < 860px) {
@@ -134,17 +132,7 @@ input {
   .foto-perfil {
     height: 2rem;
   }
-  .form input {
-    width: 120px;
-  }
-  .form i{
-    font-size: 0.8rem; 
-}
-  .form ::placeholder {
-    position: relative;
-    bottom: 2px;
-    font-size: 12px;
-  }
+
 }
 
 @media screen and (width < 430px) {
@@ -154,6 +142,10 @@ input {
   .header .logo-titulo a {
     font-size: 13px;
   }
+
+.cerrarSesion a{
+  font-size: 13px;
+}
 
   .header .logo-titulo img {
     width: 30px;
@@ -167,19 +159,5 @@ input {
   .logo,
   .foto-perfil {
     height: 1.7rem;
-  }
-
-.form i{
-    font-size: 0.7rem; 
-}
-
-  .form input {
-    width: 80px; 
-  }
-
-  .form ::placeholder {
-    position: relative;
-    bottom: 2px;
-    font-size: 11px;
   }
 }
