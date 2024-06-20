@@ -14,91 +14,6 @@ body {
   flex-direction: column;
 }
 
-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0.5rem 0;
-  flex-wrap: wrap;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-
-.nav-bar ul {
-  display: flex;
-  gap: 3rem;
-  margin: 0 5rem;
-  flex-wrap: wrap;
-}
-
-.nav-bar a{
-  transition: color 0.3s ease;
-}
-
-.nav-bar ul a {
-  color: #ffffff;
-  padding: 0.2rem;
-  border-radius: 15px;
-  font-weight: bold;
-  display: inline-block;
-}
-
-.nav-bar ul a:hover {
-  color: #EC591F;
-}
-
-.nav-bar ul li a {
-  font-size: 0.9rem;
-}
-
-.logo img,
-.perfil img {
-  height: 3rem;
-}
-
-.nav-right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-
-.nav-right .perfil img {
-  border-radius: 50%;
-}
-
-.input {
-  position: relative;
-}
-
-.input input {
-  height: 1.5rem;
-  background-color: #000000;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid #ffffff;
-}
-
-.input input::placeholder {
-  color: #636363;
-}
-
-.search i {
-  color: #ffffff;
-}
-
-.search {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 3px;
-}
-
 .main {
   background-image: url(../img/portada.jpg);
   background-position: center center;
@@ -109,7 +24,7 @@ header {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 5rem; 
+  padding-top: 3rem; 
 }
 
 .grilla {
@@ -117,7 +32,45 @@ header {
   flex-direction: column;
   gap: 2rem; 
   width: 80%;
-  margin: 5rem auto;
+  margin-top: 60px;
+}
+
+
+.busqueda-generos {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.generos, .busqueda {
+  position: relative;
+  display: inline-block;
+}
+
+.select-container select, .busqueda input {
+  padding: 0.5rem;
+  border-radius: 7px;
+  border: 0.5px solid #a034e8;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.select-container select {
+  width: 100px; 
+}
+
+.busqueda input {
+  width: 300px; 
+}
+
+.busqueda input::placeholder {
+  color: #ffffff;
+}
+
+.populares-contenedor a {
+  color: #ffffff;
 }
 
 .grilla--titulo {
@@ -173,7 +126,7 @@ header {
 }
 
 .carousel-container h2 {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .carousel {
@@ -181,6 +134,7 @@ header {
   margin: 0 auto;
   border-radius: 10px;
   padding: 5px;
+  display: flex;
 }
 
 .carousel .flickity-button {
@@ -199,13 +153,17 @@ header {
 }
 
 .carousel-cell {
-    width: 18%; 
-    height: 250px; 
-    margin-right: 20px; 
-    background: #010101;
-    border-radius: 5px;
-    counter-increment: gallery-cell;
-  }
+  width: 18%; 
+  height: 250px; 
+  margin-right: 20px; 
+  background: #010101;
+  border-radius: 5px;
+  counter-increment: gallery-cell;
+}
+
+.carousel-cell a {
+  color: #00000000;
+}
 
 .carousel-cell img {
   width: 100%;
@@ -215,16 +173,16 @@ header {
 }
 
 .flickity-page-dots .dot {
-    background-color: #bbb9b99c; /* no se cambia el color, no se porque */
-  }
-  .flickity-page-dots .dot.is-selected {
-    background: #9456E5; 
-  }
-
-#ver-mas{
-  text-decoration: none;
+  background-color: #bbb9b99c;
 }
 
+.flickity-page-dots .dot.is-selected {
+  background: #9456E5; 
+}
+
+#ver-mas {
+  text-decoration: none;
+}
 
 .generos {
   position: relative;
@@ -251,62 +209,56 @@ header {
   display: block;
 }
 
-.filtro{
-  display: none; /*PARA EL JS BUSQUEDA*/
+.filtro {
+  display: none; /* PARA EL JS BUSQUEDA */
 }
 
-ul .hide{
+ul .hide {
   display: none;
 }
 
-
-
-@media screen and (max-width: 1100px) {
-    .carousel-cell {
-        width: 170px;
-      }
+#mensajeNoResultados{
+  display: none;
+  color: #ffffff;
 }
 
+@media screen and (max-width: 1100px) {
+  .carousel-cell {
+    width: 170px;
+    height: 220px; 
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .carousel-cell img {
+    height: 180px;
+  }
+}
 
 @media (max-width: 800px) {
-  header {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .nav-bar ul {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    justify-content: center;
-    padding: 0.3rem 0;
-  }
-
-  .nav-bar ul a:hover {
-    text-decoration: underline;
-    border: none;
-  }
   .grilla--peliculas {
     gap: 10px; 
     padding: 60px;
   }
 
-  .grilla--titulo h2{
+  .grilla--titulo h2 {
     margin-left: 20px;
   }
 
-  .grilla--titulo a{
+  .grilla--titulo a {
     margin-left: 20px;
   }
+
   .carousel-cell {
-    width: 150px; 
+    width: 150px;
+    height: 200px; 
   }
 
-  .carousel-container h2{
+  .carousel-container h2 {
     margin-left: 20px;
   }
 
-  ul .hide{
+  ul .hide {
     display: none;
   }
 
@@ -315,25 +267,7 @@ ul .hide{
   }
 }
 
-@media (max-width: 600px) {
-  .input input {
-    display: none;
-  }
-
-  .search {
-    position: static;
-  }
-
-  .nav-right {
-    gap: 1rem;
-  }
-}
-
-@media screen and (max-width: 785px) {
-  .form input {
-    display: none;
-  }
-
+@media screen and (max-width: 800px) {
   .grilla {
     width: 100%;
   }
@@ -344,7 +278,43 @@ ul .hide{
   }
 }
 
+@media screen and (max-width: 700px) {
+  .carousel {
+    overflow-x: auto; 
+  }
+
+  .carousel-cell {
+    width: 60%;
+    height: auto; 
+    margin-right: -130px; 
+    flex-shrink: 0; 
+  }
+
+  .carousel-cell img {
+    height: 90%;
+    width: 60%; 
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .busqueda input {
+    width: 200px; 
+  }
+
+  .carousel-cell {
+    margin-right: -125px;
+  }
+
+  .carousel-cell img {
+    height: 85%;
+    width: 55%; 
+  }
+}
 @media screen and (max-width: 450px) {
+  .busqueda input {
+    width: 160px;
+  }
+
   .grilla {
     width: 100%;
     padding: 0 1rem;
@@ -360,5 +330,16 @@ ul .hide{
   .pelicula img {
     height: 10rem;
   }
-}
 
+  .carousel-cell {
+    width: 120px;
+    height: 180px;
+    margin-right: 5px; 
+    overflow-y: hidden;
+  }
+
+  .carousel-cell img {
+    height: 100%;
+    width: 100%;
+  }
+}
