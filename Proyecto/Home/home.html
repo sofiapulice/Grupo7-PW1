@@ -16,147 +16,199 @@
 </head>
 
 <body>
+
     <header>
-        <div class="logo">
-            <div class="header logo-titulo">
-                <a href="../Home/home.html"><img src="../Images/Brand.png" alt="logo" class="logo"></a>
-                <a class="unlix" href="../Home/home.html">UNFLIX</a>
-            </div>
-        </div>
-        <nav class="nav-bar">
-            <ul>
-                <li><a href="../Peliculas/detPeli.html">Peliculas</a></li>
-                <li><a href="../Series/detSerie.html">Series</a></li>
-                 <li class="generos">
-                    <a href="#" id="showGenres">Géneros</a>
-                    <ul class="generos-dropdown hide" id="generosDropdown">
-                        <li class="filtro-generos"><a href="#">Acción</a></li>
-                        <li class="filtro-generos"><a href="#">Aventura</a></li>
-                        <li class="filtro-generos"><a href="#">Comedia</a></li>
-                        <li class="filtro-generos"><a href="#">Drama</a></li>
-                        <li class="filtro-generos"><a href="#">Fantasía</a></li>
-                        <li class="filtro-generos"><a href="#">Terror</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <div class="nav-right">
-            
-            <div class="input">
-                <input type="text" name="input-pelicula" id="input-pelicula" placeholder="Buscar">
-                <div class="search">
-                    <i class="bi bi-search"></i>
+        <nav class="header">
+            <div class="header left">
+                <div class="header logo-titulo">
+                    <a href="../Home/home.html"><img src="../Images/Brand.png" alt="logo" class="logo"></a>
+                    <a href="../Home/home.html">UNFLIX</a>
                 </div>
             </div>
 
-            <div class="perfil">
-                <a href="../perfil/perfil.html"><img src="../img/perfil.png" alt="Foto de perfil">
-                </a>
+            <div class="items">
+                <li>
+                    <a class="home" href="../Home/home.html">Inicio</a>
+                </li>
+                <li>
+                    <a class="color" href="../Home/home.html">Peliculas</a>
+                </li>
+                <li>
+                    <a class="color" href="../Home/home.html">Series</a>
+                </li>
             </div>
 
-        </div>
 
+            <div class="header right">
+                <div class="cerrarSesion">
+                    <a href="/index.html">Cerrar Sesión</a>
+                </div>
+                <div class="perfil">
+                    <a href="../perfil/perfil.html"><img src="../img/perfil.png" alt="Foto de perfil"
+                            class="foto-perfil"></a>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main class="main">
         <div class="grilla">
-            <div class="populares-contenedor">
-            <div class="grilla--titulo">
-                <h2>Populares</h2>
-                <a href="#ver-mas">Ver más</a>
+
+            <div class="contenedor-arriba">
+                <div class="busqueda-generos">
+                    <div class="generos">
+                        <label for="Generos"></label>
+                        <div class="select-container">
+                            <select name="Generos" id="Generos">
+                                <option disabled selected value="">Géneros</option>
+                                <optionvalue="accion">Acción</option>
+                                <option value="aventura">Aventura</option>
+                                <option value="comedia">Comedia</option>
+                                <option value="drama">Drama</option>
+                                <option value="fantasia">Fantasía</option>
+                                <option value="terror">Terror</option>
+                                <option value="tragedia">Tragedia</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="busqueda">
+                        <form action="#">
+                            <input type="text" name="busqueda-pelicula" id="busqueda-pelicula" placeholder="Buscar...">
+                        </form>
+                    </div>
+                </div>
+
+                <div class="populares-contenedor" id="popularesContenedor">
+                    <div class="grilla--titulo">
+                        <h2>Populares</h2>
+                        <a href="#ver-mas">Ver más</a>
+                    </div>
+                    <div class="grilla--peliculas">
+                        <div class="pelicula">
+                            <a href="../Peliculas/detPeliBAT2.html"><img src="./img/Batman2.jpg" alt="Batman 2" /></a>
+                            <a href="../Peliculas/detPeliBAT2.html">Batman 2</a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="../Series/detSerieBrbd.html"><img src="./img/Sin título-1.jpg"
+                                    alt="Breaking Bad" /></a>
+                            <a href="../Series/detSerieBrbd.html">Breaking Bad</a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="../Series/detSerieChern.html"><img src="./img/Sin título-2.jpg"
+                                    alt="Chernobyl" /></a>
+                            <a href="../Series/detSerieChern.html">Chernobyl</a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="../Series/detSerieHod.html"><img src="./img/Sin título-3.jpg"
+                                    alt="Game of Thrones" /></a>
+                            <a href="../Series/detSerieHod.html">Game <br />of Thrones</a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="../Peliculas/detPeliSA3.html"><img src="./img/SANI.jpg"
+                                    alt="Señor de los Anillos" /></a>
+                            <a href="../Peliculas/detPeliSA3.html">Señor <br />
+                                de los Anillos</a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="../Series/detSerieTheOff.html"><img src="../img/TheOffice.jpg"
+                                    alt="The Office" /></a>
+                            <a href="../Series/detSerieTheOff.html">The Office</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="mensajeNoResultados">
+                    <p>No se encontraron resultados para la búsqueda.</p>
+                </div>
+
+                <div class="carousel-container mt-5" id="carouselPeliculas">
+                    <a id="ver-mas">
+                        <h2>Películas</h2>
+                    </a>
+                    <div class="carousel">
+                        <div class="carousel-cell" data-genres="Aventura Fantasía"><a
+                                href="../Peliculas/detPeliHP4.html"><img class="carousel-cell__img"
+                                    src="../img/harry-potter-y-el-caliz-de-fuego.png_242310155.webp" alt="">Harry Potter
+                                y el caliz de fuego</a></div>
+                        <div class="carousel-cell" data-genres="Drama Acción Crimen Thriller"><a
+                                href="../Peliculas/detPeliBAT2.html"><img class="carousel-cell__img"
+                                    src="../img/Batman2.jpg" alt="">Batman 2</a></div>
+                        <div class="carousel-cell" data-genres="Aventura Fantasía"><a
+                                href="../Peliculas/detPeliAF.html"><img class="carousel-cell__img"
+                                    src="../img/AnimalesFantasticos.jpg" alt="">Animales Fantasticos</a></div>
+                        <div class="carousel-cell" data-genres="Aventura Fantasía"><a
+                                href="../Peliculas/detPeli.html"><img class="carousel-cell__img" src="../img/HP3.jpg"
+                                    alt="">Harry Potter 3 </a></div>
+                        <div class="carousel-cell" data-genres="Aventura Fantasía"><a
+                                href="../Peliculas/detPeliSA3.html"><img class="carousel-cell__img" src="./img/SANI.jpg"
+                                    alt="">El señor de los anillos The lord of the rings</a></div>
+                    </div>
+                </div>
+
+
+                <div class="carousel-container mt-5" id="carouselSeries">
+                    <h2>Series</h2>
+                    <div class="carousel">
+                        <div class="carousel-cell" data-genres="Comedia"><a href="../Series/detSerieTheOff.html"><img
+                                    class="carousel-cell__img" src="../img/TheOffice.jpg" alt="">The office</a></div>
+                        <div class="carousel-cell" data-genres="Drama Suspenso Tragedia Humor negro"><a
+                                href="../Series/detSerieBrbd.html"><img class="carousel-cell__img"
+                                    src="./img/Sin título-1.jpg" alt="">Breaking Bad</a></div>
+                        <div class="carousel-cell" data-genres="Drama"><a href="../Series/detSerieChern.html"><img
+                                    class="carousel-cell__img" src="./img/Sin título-2.jpg" alt="">Chernobyl</a></div>
+                        <div class="carousel-cell" data-genres="Fantasía Drama Acción Aventura Terror Humor negro"><a
+                                href="../Series/detSerie.html"><img class="carousel-cell__img"
+                                    src="./img/Sin título-3.jpg" alt="">The game of thrones juego de tronos</a></div>
+                        <div class="carousel-cell" data-genres="Fantasía Drama Acción Aventura Terror"><a
+                                href="../Series/detSerieHod.html"><img class="carousel-cell__img" src="../img/HoD.jpg"
+                                    alt="">la casa de los dragones the house of the dragons</a></div>
+                    </div>
+                </div>
             </div>
-            <div class="grilla--peliculas">
-                <div class="pelicula">
-                    <a href="../Peliculas/detPeliBAT2.html"><img src="./img/Batman2.jpg" alt="Batman 2" /></a>
-                    <a href="../Peliculas/detPeliBAT2.html">Batman 2</a>
-                </div>
-                <div class="pelicula">
-                    <a href="../Series/detSerieBrbd.html"><img src="./img/Sin título-1.jpg" alt="Breaking Bad" /></a>
-                    <a href="../Series/detSerieBrbd.html">Breaking Bad</a>
-                </div>
-                <div class="pelicula">
-                    <a href="../Series/detSerieChern.html"><img src="./img/Sin título-2.jpg" alt="Chernobyl" /></a>
-                    <a href="../Series/detSerieChern.html">Chernobyl</a>
-                </div>
-                <div class="pelicula">
-                    <a href="../Series/detSerieHod.html"><img src="./img/Sin título-3.jpg" alt="Game of Thrones" /></a>
-                    <a href="../Series/detSerieHod.html">Game <br />of Thrones</a>
-                </div>
-                <div class="pelicula">
-                    <a href="../Peliculas/detPeliSA3.html"><img src="./img/SANI.jpg" alt="Señor de los Anillos" /></a>
-                    <a href="../Peliculas/detPeliSA3.html">Señor <br />
-                        de los Anillos</a>
-                </div>
-                <div class="pelicula">
-                    <a href="../Series/detSerieTheOff.html"><img src="../img/TheOffice.jpg" alt="The Office" /></a>
-                    <a href="../Series/detSerieTheOff.html">The Office</a>
-                </div>
-            </div>
-        </div>
             
-            <div class="carousel-container mt-5" id="carouselPeliculas">
-                <a id="ver-mas"><h2>Películas</h2></a>
-                <div class="carousel" data-flickity='{ "wrapAround": true }'>
-                    <div class="carousel-cell" data-genres ="Aventura Fantasía"><a href="../Peliculas/detPeliHP4.html"><img class="carousel-cell__img" src="../img/harry-potter-y-el-caliz-de-fuego.png_242310155.webp" alt="">Harry Potter y el caliz de fuego</a></div>
-                    <div class="carousel-cell" data-genres ="Drama Acción Crimen Thriller"><a href="../Peliculas/detPeliBAT2.html"><img class="carousel-cell__img" src="../img/Batman2.jpg" alt="">Batman 2</a></div>
-                    <div class="carousel-cell" data-genres ="Aventura Fantasía"><a href="../Peliculas/detPeliAF.html"><img class="carousel-cell__img" src="../img/AnimalesFantasticos.jpg" alt="">Animales Fantasticos</a></div>
-                    <div class="carousel-cell" data-genres ="Aventura Fantasía"><a href="../Peliculas/detPeli.html"><img class="carousel-cell__img" src="../img/HP3.jpg" alt="">Harry Potter 3 </a></div>
-                    <div class="carousel-cell" data-genres ="Aventura Fantasía"><a href="../Peliculas/detPeliSA3.html"><img class="carousel-cell__img" src="./img/SANI.jpg" alt="">El señor de los anillos The lord of the rings</a></div>
-                </div>
-            </div>
-
-
-            <div class="carousel-container mt-5" id="carouselSeries">
-                <h2>Series</h2>
-                <div class="carousel" data-flickity='{ "wrapAround": true }'>
-                    <div class="carousel-cell" data-genres ="Comedia"><a href="../Series/detSerieTheOff.html"><img class="carousel-cell__img" src="../img/TheOffice.jpg" alt="">The office</a></div>
-                    <div class="carousel-cell" data-genres ="Drama Suspenso Tragedia Humor negro"><a href="../Series/detSerieBrbd.html"><img class="carousel-cell__img" src="./img/Sin título-1.jpg" alt="">Breaking Bad</a></div>
-                    <div class="carousel-cell" data-genres ="Drama"><a href="../Series/detSerieChern.html"><img class="carousel-cell__img" src="./img/Sin título-2.jpg" alt="">Chernobyl</a></div>
-                    <div class="carousel-cell" data-genres ="Fantasía Drama Acción Aventura Terror Humor negro"><a href="../Series/detSerie.html"><img class="carousel-cell__img" src="./img/Sin título-3.jpg" alt="">The game of thrones juego de tronos</a></div>
-                    <div class="carousel-cell" data-genres ="Fantasía Drama Acción Aventura Terror Humor negro"><a href="../Series/detSerieHod.html"><img class="carousel-cell__img" src="../img/HoD.jpg" alt="">la casa de los dragones the house of the dragons</a></div>
-                </div>
-            </div>
-        </div>
-        <div class="search-results ocultar"></div>
     </main>
 
-<footer>
-    <div class="footer-contenedor">
-        <div class="redes-icons">
-            <a href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=es_AR&pli=1"><i
-                    class="bx bxl-instagram"></i></a>
-            <a href="https://play.google.com/store/search?q=facebook&c=apps&hl=es_AR"><i
-                    class="bx bxl-facebook-square"></i></a>
-            <a href="https://play.google.com/store/search?q=twitter&c=apps&hl=es_AR"><i class="bx bxl-twitter"></i></a>
-            <a href="https://play.google.com/store/search?q=youtube&c=apps&hl=es_AR"><i class="bx bxl-youtube"></i></a>
+    <footer>
+        <div class="footer-contenedor">
+            <div class="redes-icons">
+                <a href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=es_AR&pli=1"><i
+                        class="bx bxl-instagram"></i></a>
+                <a href="https://play.google.com/store/search?q=facebook&c=apps&hl=es_AR"><i
+                        class="bx bxl-facebook-square"></i></a>
+                <a href="https://play.google.com/store/search?q=twitter&c=apps&hl=es_AR"><i
+                        class="bx bxl-twitter"></i></a>
+                <a href="https://play.google.com/store/search?q=youtube&c=apps&hl=es_AR"><i
+                        class="bx bxl-youtube"></i></a>
+            </div>
+            <div class="condiciones">
+                <ul>
+                    <a href="https://help.instagram.com/581066165581870/">
+                        <li>
+                            <p>Condiciones de uso</p>
+                        </li>
+                    </a>
+                    <a
+                        href="https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect">
+                        <li>
+                            <p>Políticas y privacidad</p>
+                        </li>
+                    </a>
+                    <a href="https://www.youtube.com/t/contact_us/">
+                        <li>
+                            <p>Contacto</p>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <div class="copy">
+                <p>
+                    Copyright <i class="bx bx-copyright"></i> 2024 UNLIX programación web
+                </p>
+            </div>
         </div>
-        <div class="condiciones">
-            <ul>
-                <a href="https://help.instagram.com/581066165581870/">
-                    <li>
-                        <p>Condiciones de uso</p>
-                    </li>
-                </a>
-                <a href="https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect">
-                    <li>
-                        <p>Políticas y privacidad</p>
-                    </li>
-                </a>
-                <a href="https://www.youtube.com/t/contact_us/">
-                    <li>
-                        <p>Contacto</p>
-                    </li>
-                </a>
-            </ul>
-        </div>
-        <div class="copy">
-            <p>
-                Copyright <i class="bx bx-copyright"></i> 2024 UNLIX programación web
-            </p>
-        </div>
-    </div>
-</footer>
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<script src="main.js"></script>
+    </footer>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>
