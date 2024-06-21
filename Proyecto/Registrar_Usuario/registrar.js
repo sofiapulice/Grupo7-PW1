@@ -1,5 +1,5 @@
 let regexCampoEmail=/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-let regexCampoPassword=/^(?=.*[a-zA-Z].*[a-zA-Z])(?=.*\d.*\d)(?=.*[!@#$%^&*(),.?":{}|<>[\]\\/+=_-].*[!@#$%^&*(),.?":{}|<>[\]\\/+=_-])[a-zA-Z0-9!@#$%^&*(),.?":{}|<>[\]\\/+=_-]{8,}$/;
+let regexCampoPassword=/^(?=.*[a-zA-Z].*[a-zA-Z].*[a-zA-Z])(?=.*\d.*\d.*\d)(?=.*[!@#$%^&*(),.?":{}|<>[\]\\/+=_-].*[!@#$%^&*(),.?":{}|<>[\]\\/+=_-].*[!@#$%^&*(),.?":{}|<>[\]\\/+=_-])[a-zA-Z0-9!@#$%^&*(),.?":{}|<>[\]\\/+=_-]{9,}$/;
 let regexCampoNA=/^[A-Za-z]+$/;
  
 
@@ -27,7 +27,7 @@ function validar (event){
         //Valida la contraseña
         if(!regexCampoPassword.test(document.getElementById("password").value)){
             error=true;
-            mensajeError+="<p>La contraseña no es válida, debe contener 3 letras, 3 números y 3 caracteres especiales</p>"; 
+            mensajeError+="<p>La contraseña no es válida, debe contener al menos 3 letras, 3 números y 3 caracteres especiales</p>"; 
         }
         if (document.getElementById("password").value !== document.getElementById("repetirpassword").value) {
             error = true;
