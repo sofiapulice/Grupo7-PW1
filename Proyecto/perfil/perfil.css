@@ -237,6 +237,12 @@ input[type="checkbox"] {
   width: 13rem;
   background-color: #ee660c;
 }
+
+.buttons .button-confirmar {
+  background-color: #9456e5;
+}
+
+
 .buttons button:hover {
   cursor: pointer;
 }
@@ -244,9 +250,9 @@ input[type="checkbox"] {
   text-decoration: none;
   color: white;
 }
-.button-confirmar button {
-  border-radius: 0.5rem;
-  background-color: #9456e5;
+
+.hidden-submit {
+  display: none;
 }
 
 @media screen and (width<1024px) {
