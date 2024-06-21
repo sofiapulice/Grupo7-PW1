@@ -27,7 +27,6 @@ function validarFormulario() {
 
     usuarios.push(nuevoUsuario);
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
-    alert('Usuario registrado exitosamente');
     return true;
 }
 
