@@ -17,7 +17,7 @@ function validarPerfil(event) {
     } else if (metodosDePago.value === "tarjetaPerfil") {
         if (tarjetaPar === "") {
             errorPerfil = true;
-            mensajeErrorPerfil += "<p>Completa el campo tarjeta</p>";
+            mensajeErrorPerfil += "<p>Completá el campo tarjeta</p>";
         } else if (!regexTarjetaCreditoPerfil.test(tarjetaPar)) {
             errorPerfil = true;
             mensajeErrorPerfil += "<p>Número de tarjeta inválido. Debe tener entre 16 y 19 dígitos.</p>";

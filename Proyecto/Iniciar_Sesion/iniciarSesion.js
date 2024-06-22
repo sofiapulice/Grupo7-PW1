@@ -30,5 +30,15 @@ function validarFormulario() {
     return true;
 }
 
-
+document.addEventListener("DOMContentLoaded", ()=>{
+    let usuarios = JSON.parse(localStorage.getItem('usuarios'));
+    if (usuarios && usuarios.length > 0) {
+        const nombreUsuario = usuarios[0].usuario;
+        const nombreUsuarioCSS = document.querySelector(".contenedor--usuario");
+        nombreUsuarioCSS.textContent = `${nombreUsuario}`;
+        nombreUsuarioCSS.style.color = "orange";
+        nombreUsuarioCSS.style.fontSize = "1.7em";
+        nombreUsuarioCSS.style.fontFamily = "sans serif";
+    }
+});
 
