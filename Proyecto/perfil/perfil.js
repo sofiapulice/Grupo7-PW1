@@ -116,6 +116,25 @@ function validarPerfil(event) {
   } else {
     window.location.href = "../Home/home.html";
   }
+
+  //Para guardar en el LocalStorage
+
+  let usuariosPerfil = JSON.parse(localStorage.getItem('usuariosPerfil')) || [];
+
+  let textoMetodosDePago = metodosDePago.nextElementSibling.innerText;
+
+    let datosUsuario = {
+        contraseña: password,
+        contraseñaRepetida: repetirPassword,
+        numTarjeta: tarjetaPar,
+        claveTarjeta: claveC,
+        metPago: textoMetodosDePago
+    };
+
+    usuariosPerfil.push(datosUsuario);
+    localStorage.setItem('usuariosPerfil', JSON.stringify(usuariosPerfil));
+    /* return true; */
+
 }
 
 document.querySelector(".button-confirmar").addEventListener("click", validarPerfil);
