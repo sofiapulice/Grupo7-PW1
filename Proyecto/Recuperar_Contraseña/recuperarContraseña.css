@@ -18,7 +18,9 @@ body {
   display: flex;
   padding: 10px 30px;
   width: 320px;
-  background-color: #060505;
+  background-color: #00000068;
+  border: 2px solid #ffffff33;
+  color: #ffffff;
   border-radius: 20px;
   padding: 10px 30px;
 
