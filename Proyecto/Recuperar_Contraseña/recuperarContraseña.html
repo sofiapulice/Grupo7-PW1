@@ -12,25 +12,26 @@
 <body>
     <main>
         <div class="wrapper">
-            <form action="../Iniciar_Sesion/iniciarSesion.html">
+            <form id="formRecu">
                 <h1>Recuperar contraseña</h1>
                 <div class="input-box">
-                    <input type="text" placeholder=" nombre de usuario" id="usuarioRecu">
+                    <input type="text" placeholder="Nombre" id="usuarioRecu" required>
                     <i class='bx bxs-user'></i>
                 </div>
                 <div class="input-box-mail">
-                <div class="input-box">
-                    <input type="email" placeholder=" email" id="mailRecu">
-                    <i class='bx bxs-envelope'></i>
-                </div>
+                    <div class="input-box">
+                        <input type="email" placeholder="Email" id="mailRecu" required>
+                        <i class='bx bxs-envelope'></i>
+                    </div>
                 </div>
                 <div class="btn">
                     <button class="enviar" type="submit">Enviar</button>
-                    <button class="cancelar" ><a href="../Iniciar_Sesion/iniciarSesion.html">Cancelar</a></button>
+                    <button class="cancelar" type="button"><a href="../Iniciar_Sesion/iniciarSesion.html">Cancelar</a></button>
                 </div>
                 <register class="inicio-link">
-                    <p>¿No tienes una cuenta? <a href="../Registrar_Usuario/registrarPaso1.html"> Registrar </a></p>
+                    <p>¿No tienes una cuenta? <a href="../Registrar_Usuario/registrarPaso1.html">Registrar</a></p>
             </form>
+            <div id="error-message" style="color: red; font-size: 12px;"></div>
         </div>
     </main>
     <script src="./recuperarContraseña.js"></script>
