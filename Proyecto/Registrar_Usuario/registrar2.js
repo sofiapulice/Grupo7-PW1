@@ -1,5 +1,3 @@
-//Para registrar paso 2 
- 
 let regexTarjetaCredito = /^\d{16,19}$/;
 let regexClaveCredito = /^[1-9]{3}$/;
 
