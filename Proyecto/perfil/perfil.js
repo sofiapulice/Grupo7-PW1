@@ -3,106 +3,111 @@ let regexClaveCreditoPerfil = /^[1-9]{3}$/;
 let regexCampoPassword = /^(?=.*[a-zA-Z].*[a-zA-Z])(?=.*\d.*\d)(?=.*[!@#$%^&*(),.?":{}|<>[\]\\/+=_-].*[!@#$%^&*(),.?":{}|<>[\]\\/+=_-])[a-zA-Z0-9!@#$%^&*(),.?":{}|<>[\]\\/+=_-]{9,}$/;
 
 function cargarDatosPerfil() {
-    let datosPerfil = JSON.parse(localStorage.getItem('datosPerfil'));
-    if (datosPerfil) {
-        document.getElementById('nombreUsuario').textContent = datosPerfil.nombre;
-        document.getElementById('emailUsuario').textContent = datosPerfil.email;
-        document.getElementById('password-real').value = datosPerfil.contraseña || '';
-        actualizarContrasenia(datosPerfil.contraseña || '');
-    }
+  let datosUsuario = JSON.parse(localStorage.getItem('datosUsuario'));
+  if (datosUsuario) {
+      document.getElementById('nombreUsuario').textContent = datosUsuario.nombre;
+      document.getElementById('emailUsuario').textContent = datosUsuario.email;
+      document.getElementById('password-real').value = datosUsuario.contraseña || '';
+      actualizarContrasenia(datosUsuario.contraseña || '');
+  }
 }
 
 function actualizarContrasenia(contraseña) {
-    const passwordMaskElement = document.getElementById('password-mask');
-    passwordMaskElement.textContent = '*'.repeat(contraseña.length);
+  const passwordMaskElement = document.getElementById('password-mask');
+  passwordMaskElement.textContent = '*'.repeat(contraseña.length);
 }
 
-document.addEventListener('DOMContentLoaded', cargarDatosPerfil);
+document.addEventListener('DOMContentLoaded', function () {
+  cargarDatosPerfil();
+});
 
 function validarPerfil(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    let errorPerfil = false;
-    let mensajeErrorPerfil = "";
-    document.getElementById("mensajePerfil").style.color = "red";
+  let errorPerfil = false;
+  let mensajeErrorPerfil = "";
+  document.getElementById("mensajePerfil").style.color = "red";
 
-    const tarjetaPar = document.getElementById("tarjetaPerfil").value.trim();
-    const claveC = document.getElementById("clavePerfil").value.trim();
-    const password = document.getElementById("password").value;
-    const repetirPassword = document.getElementById("repetir-password").value;
-    const metodosDePago = document.querySelector('input[name="metodo--pago"]:checked');
+  const tarjetaPar = document.getElementById("tarjetaPerfil").value.trim();
+  const claveC = document.getElementById("clavePerfil").value.trim();
+  const password = document.getElementById("password").value;
+  const repetirPassword = document.getElementById("repetir-password").value;
+  const metodosDePago = document.querySelector('input[name="metodo--pago"]:checked');
 
-    if (password === "" || repetirPassword === "") {
-        errorPerfil = true;
-        mensajeErrorPerfil += "<p>Completa ambos campos de contraseña</p>";
-    } else if (password !== repetirPassword) {
-        errorPerfil = true;
-        mensajeErrorPerfil += "<p>Las contraseñas no coinciden</p>";
-    } else if (!regexCampoPassword.test(password)) {
-        errorPerfil = true;
-        mensajeErrorPerfil += "<p>La contraseña no cumple con los requisitos</p>";
-    }
+  if (password === "" || repetirPassword === "") {
+      errorPerfil = true;
+      mensajeErrorPerfil += "<p>Completa ambos campos de contraseña</p>";
+  } else if (password !== repetirPassword) {
+      errorPerfil = true;
+      mensajeErrorPerfil += "<p>Las contraseñas no coinciden</p>";
+  } else if (!regexCampoPassword.test(password)) {
+      errorPerfil = true;
+      mensajeErrorPerfil += "<p>La contraseña no cumple con los requisitos</p>";
+  }
 
-    if (!metodosDePago) {
-        errorPerfil = true;
-        mensajeErrorPerfil += "<p>Por favor, selecciona un método de pago</p>";
-    } else if (metodosDePago.value === "tarjetaPerfil") {
-        if (tarjetaPar === "") {
-            errorPerfil = true;
-            mensajeErrorPerfil += "<p>Completa el campo tarjeta</p>";
-        } else if (!regexTarjetaCreditoPerfil.test(tarjetaPar)) {
-            errorPerfil = true;
-            mensajeErrorPerfil += "<p>Número de tarjeta inválido. Debe tener entre 16 y 19 dígitos.</p>";
-        } else {
-            const digitos = tarjetaPar.split('').map(Number);
-            const sumaDeTodoMenosElUltimo = digitos.slice(0, -1).reduce((acumulador, valor) => acumulador + valor, 0);
-            const ultimoDigito = digitos[digitos.length - 1];
+  if (!metodosDePago) {
+      errorPerfil = true;
+      mensajeErrorPerfil += "<p>Por favor, selecciona un método de pago</p>";
+  } else if (metodosDePago.value === "tarjetaPerfil") {
+      if (tarjetaPar === "") {
+          errorPerfil = true;
+          mensajeErrorPerfil += "<p>Completa el campo tarjeta</p>";
+      } else if (!regexTarjetaCreditoPerfil.test(tarjetaPar)) {
+          errorPerfil = true;
+          mensajeErrorPerfil += "<p>Número de tarjeta inválido. Debe tener entre 16 y 19 dígitos.</p>";
+      } else {
+          const digitos = tarjetaPar.split('').map(Number);
+          const sumaDeTodoMenosElUltimo = digitos.slice(0, -1).reduce((acumulador, valor) => acumulador + valor, 0);
+          const ultimoDigito = digitos[digitos.length - 1];
 
-            if ((sumaDeTodoMenosElUltimo % 2 !== 0 && ultimoDigito % 2 === 0) || (sumaDeTodoMenosElUltimo % 2 === 0 && ultimoDigito % 2 !== 0)) {
-                // Validación exitosa, no hacer nada
-            } else {
-                errorPerfil = true;
-                mensajeErrorPerfil += "<p>Tarjeta no válida</p>";
-            }
-        }
+          if ((sumaDeTodoMenosElUltimo % 2 !== 0 && ultimoDigito % 2 === 0) || (sumaDeTodoMenosElUltimo % 2 === 0 && ultimoDigito % 2 !== 0)) {
+              // Validación exitosa, no hacer nada
+          } else {
+              errorPerfil = true;
+              mensajeErrorPerfil += "<p>Tarjeta no válida</p>";
+          }
+      }
 
-        if (claveC === "000" || claveC === "") {
-            errorPerfil = true;
-            mensajeErrorPerfil += "<p>¿Y la clave?</p>";
-        } else if (!regexClaveCreditoPerfil.test(claveC)) {
-            errorPerfil = true;
-            mensajeErrorPerfil += "<p>Clave incorrecta: debe ser un número de 3 dígitos</p>";
-        }
-    } else if (metodosDePago.value === "cuponPerfil") {
-        const pagoFacilPerfil = document.getElementById("pagoFacilPerfil").checked;
-        const RapiPagoPerfil = document.getElementById("RapiPagoPerfil").checked;
+      if (claveC === "000" || claveC === "") {
+          errorPerfil = true;
+          mensajeErrorPerfil += "<p>¿Y la clave?</p>";
+      } else if (!regexClaveCreditoPerfil.test(claveC)) {
+          errorPerfil = true;
+          mensajeErrorPerfil += "<p>Clave incorrecta: debe ser un número de 3 dígitos</p>";
+      }
+  } else if (metodosDePago.value === "cuponPerfil") {
+      const pagoFacilPerfil = document.getElementById("pagoFacilPerfil").checked;
+      const RapiPagoPerfil = document.getElementById("RapiPagoPerfil").checked;
 
-        if (!pagoFacilPerfil && !RapiPagoPerfil) {
-            errorPerfil = true;
-            mensajeErrorPerfil += "<p>Por favor, selecciona Pago Fácil o RapiPago</p>";
-        }
-    }
+      if (!pagoFacilPerfil && !RapiPagoPerfil) {
+          errorPerfil = true;
+          mensajeErrorPerfil += "<p>Por favor, selecciona Pago Fácil o RapiPago</p>";
+      }
+  }
 
-    if (errorPerfil) {
-        document.getElementById("mensajePerfil").innerHTML = mensajeErrorPerfil;
-    } else {
-        let datosPerfil = JSON.parse(localStorage.getItem('datosPerfil')) || {};
+  if (errorPerfil) {
+      document.getElementById("mensajePerfil").innerHTML = mensajeErrorPerfil;
+  } else {
+      let datosPerfil = JSON.parse(localStorage.getItem('datosPerfil')) || {};
 
-        datosPerfil.nombre = document.getElementById('nombreUsuario').textContent;
-        datosPerfil.email = document.getElementById('emailUsuario').textContent;
-        datosPerfil.contraseña = password;
-        datosPerfil.numTarjeta = tarjetaPar;
-        datosPerfil.claveTarjeta = claveC;
-        datosPerfil.metPago = metodosDePago.nextElementSibling.innerText;
+      datosPerfil.nombre = document.getElementById('nombreUsuario').textContent;
+      datosPerfil.email = document.getElementById('emailUsuario').textContent;
+      datosPerfil.contraseña = password;
+      datosPerfil.numTarjeta = tarjetaPar;
+      datosPerfil.claveTarjeta = claveC;
+      datosPerfil.metPago = metodosDePago.nextElementSibling.innerText;
 
-        localStorage.setItem('datosPerfil', JSON.stringify(datosPerfil));
+      localStorage.setItem('datosPerfil', JSON.stringify(datosPerfil));
 
-        actualizarContrasenia(password);
+      // Actualizar la máscara de contraseña
+      actualizarContrasenia(password);
 
-        document.getElementById('password-real').value = password;
+      // También actualizar el campo de contraseña en el DOM
+      document.getElementById('password-real').value = password;
 
-        window.location.href = "../Home/home.html";
-    }
+      // Redirigir a la página de inicio
+      window.location.href = "../Home/home.html";
+  }
 }
 
 document.querySelector(".button-confirmar").addEventListener("click", validarPerfil);
