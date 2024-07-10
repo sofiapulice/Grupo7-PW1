@@ -99,13 +99,10 @@ function validarPerfil(event) {
 
       localStorage.setItem('datosPerfil', JSON.stringify(datosPerfil));
 
-      // Actualizar la máscara de contraseña
       actualizarContrasenia(password);
 
-      // También actualizar el campo de contraseña en el DOM
       document.getElementById('password-real').value = password;
 
-      // Redirigir a la página de inicio
       window.location.href = "../Home/home.html";
   }
 }
