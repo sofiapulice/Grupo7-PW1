@@ -40,10 +40,9 @@
                     <form action="../Home/home.html" class="contenedor__form" onsubmit="return validarPerfil(event)">
                         <div class="contenedor--datos-1">
                             <span class="datos--titulo">Datos Personales</span>
-                            <span>E-mail: <span id="emailUsuario"></span></span>
                             <label for="password" class="contra">Contraseña:
                                 <input type="hidden" id="password-real" value="">
-                                <span id="password-mask">****************</span>
+                                <span id="password-mask">**********************</span>
                             </label>
                             <div class="nueva--contrasenia">
                                 <label for="password">Nueva contraseña:
@@ -109,15 +108,14 @@
     <script src="../Iniciar_Sesion/iniciarSesion.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            let usuarios = JSON.parse(localStorage.getItem('usuarios'));
-            if (usuarios && usuarios.length > 0) {
-                let ultimoUsuario = usuarios[usuarios.length - 1];
-                document.getElementById('nombreUsuario').textContent = ultimoUsuario.nombre;
-                document.getElementById('emailUsuario').textContent = ultimoUsuario.usuario;
-                document.getElementById('password-real').value = ultimoUsuario.contraseña || '';
-                actualizarContrasenia(ultimoUsuario.contraseña || '');
-            }
-        });
+    let usuarios = JSON.parse(localStorage.getItem('usuarios'));
+    if (usuarios && usuarios.length > 0) {
+        let ultimoUsuario = usuarios[usuarios.length - 1];
+        document.getElementById('nombreUsuario').textContent = ultimoUsuario.nombre;
+        document.getElementById('password-real').value = ultimoUsuario.contraseña || '';
+        actualizarContrasenia(ultimoUsuario.contraseña || '');
+    }
+});
     </script>
 </body>
 </html>
