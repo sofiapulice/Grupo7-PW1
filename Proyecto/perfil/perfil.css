@@ -106,9 +106,7 @@ main{
   grid-template-columns: 1fr 1fr;
   border-top: 1px solid #0000003a;
 }
-.contenedor--datos .buttons {
-  
-}
+
 
 .contenedor--datos-1 {
   border: 1px solid #d6d3d33a;
@@ -255,8 +253,27 @@ input[type="checkbox"] {
   display: none;
 }
 
-@media screen and (width<1024px) {
+#nombreUsuario{
+color: #ee660c;
+font-weight: bold;
+font-size: 25px;
+}
 
+.contra{
+  margin-left: 200px;
+}
+
+@media screen and (width<1260px) {
+  .contra{
+    margin-left: 150px;
+  }
+}
+
+@media screen and (width<1025px) {
+
+  .contra{
+    margin-left: 95px;
+  }
   .contenedor--datos{
     display: flex;
     flex-direction: column;
@@ -270,6 +287,9 @@ input[type="checkbox"] {
 }
 
 @media screen and (width <768px){
+  .contra{
+    margin-left: 50px;
+  }
   .nueva--contrasenia{
     display: flex;
     flex-direction: column;
@@ -305,3 +325,4 @@ input[type="checkbox"] {
     margin-top: 0.5rem;
   }
 }
+
