@@ -1,7 +1,6 @@
-let regexCampoEmail=/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-let regexCampoPassword=/^(?=.*[a-zA-Z].*[a-zA-Z].*[a-zA-Z])(?=.*\d.*\d.*\d)(?=.*[!@#$%^&*(),.?":{}|<>[\]\\/+=_-].*[!@#$%^&*(),.?":{}|<>[\]\\/+=_-].*[!@#$%^&*(),.?":{}|<>[\]\\/+=_-])[a-zA-Z0-9!@#$%^&*(),.?":{}|<>[\]\\/+=_-]{9,}$/;
-let regexCampoNA=/^[A-Za-z]+$/;
- 
+let regexCampoEmail = /^[a-z0-9!#$%&'*+/=?^_{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+let regexCampoPassword = /^(?=.*[a-zA-Z].*[a-zA-Z].*[a-zA-Z])(?=.*\d.*\d.*\d)(?=.*[!@#$%^&*(),.?":{}|<>[\]\\/+=_-].*[!@#$%^&*(),.?":{}|<>[\]\\/+=_-].*[!@#$%^&*(),.?":{}|<>[\]\\/+=_-])[a-zA-Z0-9!@#$%^&*(),.?":{}|<>[\]\\/+=_-]{9,}$/;
+let regexCampoNA = /^[A-Za-z]+$/;
 
 function validar(event) {
     let error = false;
@@ -45,15 +44,13 @@ function validar(event) {
     }
 
     // Guardar los datos en localStorage
-    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-    let nuevoUsuario = {
-        usuario: email,
+    let datosUsuario = {
+        email: email,
         contraseña: password,
         nombre: nombre,
         apellido: apellido
     };
-    usuarios.push(nuevoUsuario);
-    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+    localStorage.setItem('datosUsuario', JSON.stringify(datosUsuario));
     return true;
 }
 
