@@ -50,10 +50,11 @@ function validar(event) {
         nombre: nombre,
         apellido: apellido
     };
-    localStorage.setItem('datosUsuario', JSON.stringify(datosUsuario));
+
+    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    usuarios.push(datosUsuario);
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
     return true;
 }
 
 document.querySelector(".campos").addEventListener("submit", validar);
-
-
