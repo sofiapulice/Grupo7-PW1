@@ -13,7 +13,7 @@ document.getElementById("formRecu").addEventListener("submit", function(event) {
 
     // Recuperar usuarios registrados
     let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-    let usuarioEncontrado = usuarios.find(usuario => usuario.usuario === mailRecuValidar && usuario.nombre === usuarioRecuValidar);
+    let usuarioEncontrado = usuarios.find(usuario => usuario.email === mailRecuValidar && usuario.nombre === usuarioRecuValidar);
 
     // Validar si el usuario está registrado
     if (!usuarioEncontrado) {
@@ -22,3 +22,4 @@ document.getElementById("formRecu").addEventListener("submit", function(event) {
         alert("Se ha enviado un correo de recuperación. Verifique su bandeja de entrada.");
     }
 });
+
