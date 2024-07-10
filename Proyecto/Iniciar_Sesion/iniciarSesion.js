@@ -6,10 +6,10 @@ function validarFormulario() {
     errorMessage.textContent = "";
 
     let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-    let usuarioEncontrado = usuarios.find(usuario => usuario.usuario === usuarioValidar && usuario.contraseña === contraseñaValidar);
+    let usuarioEncontrado = usuarios.find(usuario => usuario.email === usuarioValidar && usuario.contraseña === contraseñaValidar);
 
     if (!usuarioEncontrado) {
-        errorMessage.textContent = "Usuario o contraseña incorrectos. Registrese.";
+        errorMessage.textContent = "Usuario o contraseña incorrectos. Regístrese.";
         return false;
     }
 
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const nombreUsuarioCSS = document.querySelector(".contenedor--usuario");
         if (nombreUsuarioCSS) {
             nombreUsuarioCSS.textContent = nombreUsuario;
-            nombreUsuarioCSS.style.color = "red";
+            nombreUsuarioCSS.style.color = "#ee660c";
             nombreUsuarioCSS.style.fontSize = "1.7em";
             nombreUsuarioCSS.style.fontFamily = "sans-serif";
         }
